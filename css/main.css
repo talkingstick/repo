@@ -1,0 +1,76 @@
+/****** RESET ******/
+ body {
+    margin: 0;
+    padding: 0;
+    background-color: #FFF;
+    font-size: 100%;
+
+}
+/*Ensures that new structural elements are display:block for older browsers*/
+ header, menu, nav, section, textarea, 
+ button, input, div,footer {
+    display:block;
+    font-family: tahoma;
+}
+ 
+
+.side  {
+    float: left;
+    width: 50%;
+    background-color: #DDD;
+    
+}
+.innerSide {
+    border: solid 6px #999; 
+    height: 300px;
+   
+}
+
+.silent {
+    background-color: red;
+
+}
+
+.talking {
+    background-color: green;
+}
+ 
+.timeBox {
+    border:solid 1px #EEE;
+    padding:1em;
+    text-align:center;
+    background-color: white;
+}
+
+button {
+    border:none;
+    padding:1em;
+    display: -webkit-inline-box;
+}
+
+.start {
+    background-color: green;   
+    font-weight: bold;
+    color: #FFF;
+    transition-duration: 1s; 
+}
+.buttonBox {
+    margin:5px auto;
+    text-align:center;
+}
+.end {
+    width:100%;
+    border: solid 1px #CCC;
+    margin: 5px 0px;
+}
+button:active {
+    background-color:#FFF;
+}
+
+.sideA, .sideB  {
+    transition-duration: 2s; 
+}
+
+ #startA, #startB {
+    transition-duration: 1s; 
+}
