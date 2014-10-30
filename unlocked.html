@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	    <meta charset="utf-8">
+		<title>Talking Stick: Unlocked Mode</title>
+
+		<style>
+			header {text-align: center; color:#003842;}
+			.container {background-color: #DDCDB8; width: 100%; text-align: center; margin: 5px auto; padding:0;}
+			.speaker {padding: 10px; width: 47%; text-align: center; height: 300px; margin: 0;}
+			.a {background-color:  #97BFBE; float: left;}
+			.b {background-color: #BCD0C4; float: right;}
+			.button {width: 100%; padding: 10px; background-color: #DDCDB8; margin: 5px 0; text-align: center; clear: both; }
+			#runningTimer {width: 100%; text-align: center; padding: 10px; background-color: #003842; color: white;}
+		body {font-family: arial, helvetica, sans-serif;}
+		h1 {font-weight: normal;}
+			#end {
+			    width:100%;
+			}
+			button {
+			    border:none;
+			    padding:1em;
+			    width:25%;
+			    background-color: #FFC9A7;
+			}
+
+			button:active {
+			    background-color:#003842;
+			}
+		</style>
+
+    </head>
+
+    <body>
+		<header>
+			<h1>Talking Stick: Unlocked Session</h1>
+		</header>
+
+		<div id="runningTimer">X:XX:XX</div>
+		
+		<div class="container">
+			<div class="speaker a" id="speakerA"><button id="startA">Start A</button></div>
+			<div class="speaker b" id="speakerB"><button id="startB">Start B</button></div>
+		</div>
+		<br>
+
+		<div class="button" id="pause"><button id="sessionPause">Pause</button></div>
+		<div class="button" id="end"><button id="sessionEnd">End</button></div>
+
+    </body>
+
+ </html>
