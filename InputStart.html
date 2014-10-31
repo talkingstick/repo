@@ -3,8 +3,6 @@
 <html lang="en">
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-    <meta content="width=device-width, initial-scale=1.0, max-width=1" name=
-    "viewport">
     <link href="css/input.css" rel="stylesheet" type="text/css">
     <script src=
     "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -17,12 +15,12 @@
     <div>
         <form>
             How Many Users: <input id="NumberofUsers" type="number"><br>
-            How Many Minutes: <input id="Session" type="time">
+            How Many Minutes: <input id="Session" type="number">
 
             <form action="" method="post">
                 <br>
-                <input name="mode" type="radio" value="Locked" checked>Locked
-                <input name="mode" type="radio" value="Unlocked">Unlocked
+                <input id="locked" name="mode" type="radio" value="Locked" checked>Locked
+                <input id="unlocked" name="mode" type="radio" value="Unlocked">Unlocked
             </form>
         </form>
     </div>
