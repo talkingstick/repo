@@ -4,6 +4,7 @@
     padding: 0;
     background-color: #FFF;
     font-size: 100%;
+    font-weight: arial, helvetica, sans-serif;
 
 }
 /*Ensures that new structural elements are display:block for older browsers*/
@@ -13,7 +14,6 @@
     font-family: tahoma;
 }
  
-
 .side  {
     float: left;
     width: 50%;
@@ -23,7 +23,6 @@
 .innerSide {
     border: solid 6px #999; 
     height: 300px;
-   
 }
 
 .silent {
@@ -42,12 +41,24 @@
     background-color: white;
 }
 
+.timeBox .bz{
+    width: 100%; 
+    text-align: center; 
+    padding: 10px; 
+    background-color: #003842; 
+    color: white;
+}
+
 button {
     border:none;
     padding:1em;
-    display: -webkit-inline-box;
+    display: -webkit-inline-box;    
+    background-color: #FFC9A7;
 }
 
+button:active {
+    background-color:#003842;
+}
 .start {
     background-color: green;   
     font-weight: bold;
@@ -63,9 +74,6 @@ button {
     border: solid 1px #CCC;
     margin: 5px 0px;
 }
-button:active {
-    background-color:#FFF;
-}
 
 .sideA, .sideB  {
     transition-duration: 2s; 
@@ -74,3 +82,16 @@ button:active {
  #startA, #startB {
     transition-duration: 1s; 
 }
+
+
+// Styles for Unlocked Screen
+header {text-align: center; color:#003842;}
+.container {background-color: #DDCDB8; width: 100%; text-align: center; margin: 5px auto; padding:0;}
+.speaker {padding: 10px; width: 47%; text-align: center; height: 300px; margin: 0;}
+.a {background-color:  #97BFBE; float: left;}
+.b {background-color: #BCD0C4; float: right;}
+.button {width: 100%; padding: 10px; background-color: #DDCDB8; margin: 5px 0; text-align: center; clear: both; }
+#runningTimer {width: 100%; text-align: center; padding: 10px; background-color: #003842; color: white;}
+body {font-family: arial, helvetica, sans-serif;}
+h1 {font-weight: normal;}
+

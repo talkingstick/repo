@@ -1,33 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	    <meta charset="utf-8">
-		<title>Talking Stick: Unlocked Mode</title>
-
-		<style>
-			header {text-align: center; color:#003842;}
-			.container {background-color: #DDCDB8; width: 100%; text-align: center; margin: 5px auto; padding:0;}
-			.speaker {padding: 10px; width: 47%; text-align: center; height: 300px; margin: 0;}
-			.a {background-color:  #97BFBE; float: left;}
-			.b {background-color: #BCD0C4; float: right;}
-			.button {width: 100%; padding: 10px; background-color: #DDCDB8; margin: 5px 0; text-align: center; clear: both; }
-			#runningTimer {width: 100%; text-align: center; padding: 10px; background-color: #003842; color: white;}
-		body {font-family: arial, helvetica, sans-serif;}
-		h1 {font-weight: normal;}
-			#end {
-			    width:100%;
-			}
-			button {
-			    border:none;
-			    padding:1em;
-			    width:25%;
-			    background-color: #FFC9A7;
-			}
-
-			button:active {
-			    background-color:#003842;
-			}
-		</style>
+  	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0, max-width=1" name=
+    "viewport">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <script src=
+    "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/unlocked.js" type="text/javascript"></script>
+	<title>Talking Stick: Unlocked Mode</title>
 
     </head>
 
@@ -36,16 +17,27 @@
 			<h1>Talking Stick: Unlocked Session</h1>
 		</header>
 
-		<div id="runningTimer">X:XX:XX</div>
+		<div class="timeBox bz" id="timeBox">
+			<!--<span id="hours">0</span>: <span id="minutes">0</span>: <span id=
+            "seconds">0</span>-->
+		</div>
 		
 		<div class="container">
-			<div class="speaker a" id="speakerA"><button id="startA">Start A</button></div>
-			<div class="speaker b" id="speakerB"><button id="startB">Start B</button></div>
-		</div>
+			<div class="speaker a" id="speakerA">
+				<button id="startA" class="start">Start</button>
+				<p>Time used: <span id="timeUsedA">X</span></p>
+				<p>Time Remaining: <span id="timeRemainingA">X</span></p>
+			</div>
+			<div class="speaker b" id="speakerB">
+				<button id="startB" class="start">Start B</button>
+				<p>Time used: <span id="timeUsedB">X</span></p>
+				<p>Time Remaining: <span id="timeRemainingB">X</span></p>
+			</div>
+		</div><!-- end .container -->
 		<br>
 
-		<div class="button" id="pause"><button id="sessionPause">Pause</button></div>
-		<div class="button" id="end"><button id="sessionEnd">End</button></div>
+		<div class="button"><button id="pause">Pause</button></div>
+		<div class="button"><button id="end">End</button></div>
 
     </body>
 
