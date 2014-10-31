@@ -1,21 +1,31 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 <head>
-    <link href="css/InputStart.css" rel="stylesheet" type="text/css">
-<script src=
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <link href="css/input.css" rel="stylesheet" type="text/css">
+    <script src=
     "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/InputStart.js" type="text/javascript"></script>
+
+    <title>Start Page</title>
 </head>
+
 <body>
-	<form>How Many Users:
-    <input type="text" name="NumberofUsers">
-    <br>How Many Minutes:
-    <input type="text" name="lastname">
-    <form action="" method="POST">
-        <br>
-        <input type="radio" name="mode" value="Locked" checked>Locked
-        <input type="radio" name="mode" value="Unlocked">Unlocked</form>
-    <input id="Start" type="button" value="Start" onclick="doFunction();" />
-<script type="js/InputStart">
-</script>
+    <div>
+        <form>
+            How Many Users: <input id="NumberofUsers" type="number"><br>
+            How Many Minutes: <input id="Session" type="number">
+
+            <form action="" method="post">
+                <br>
+                <input id="locked" name="mode" type="radio" value="Locked" checked>Locked
+                <input id="unlocked" name="mode" type="radio" value="Unlocked">Unlocked
+            </form>
+        </form>
+    </div>
+<button type="button" onclick="start()">Start Here</button>
+
+
 </body>
 </html>

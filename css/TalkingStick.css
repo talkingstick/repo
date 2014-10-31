@@ -1,4 +1,3 @@
-<style>
 #timeBox {
     border:solid 1px #EEE;
     padding:1em;
@@ -7,8 +6,7 @@
 button {
     border:none;
     padding:1em;
-    width:25%;
-}
+ }
 #buttonBox {
     margin:5px auto;
     text-align:center;
@@ -19,4 +17,4 @@ button {
 button:active {
     background-color:#FFF;
 }
-</style> 
+ 
