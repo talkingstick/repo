@@ -1,9 +1,12 @@
-var sA = 60;
-var mA = 14;
+var session = parseInt(localStorage.Session);
+var numberOfUsers  = parseInt(localStorage.numberOfUsers);
+ 
+var sA = 0;
+var mA = Math.round(session/numberOfUsers);
 var hA = 0;
 
-var sB = 60;
-var mB = 14;
+var sB = 0;
+var mB = Math.round(session/numberOfUsers);
 var hB = 0;
 
 var pauseA = 1;
@@ -11,7 +14,6 @@ var pauseB = 1;
 
 var intervalA = setInterval(decrementA, 1000);
 var intervalB = setInterval(decrementB, 1000);
-
 
 
 function decrementA() {
@@ -80,9 +82,9 @@ function end() {
 }
 
 function counterValueA() {
-    document.getElementById("timeBoxA").innerHTML = (hA + ": " + mA + ": " + sA);
+    document.getElementById("timeBoxA").innerHTML = ("Remaining Time: " +   mA + ": " + sA);
 }
 
 function counterValueB() {
-    document.getElementById("timeBoxB").innerHTML = (hB + ": " + mB + ": " + sB);
+    document.getElementById("timeBoxB").innerHTML = ("Remaining Time: " +  mB + ": " + sB);
 }
