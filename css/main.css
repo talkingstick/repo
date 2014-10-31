@@ -11,7 +11,8 @@
  header, menu, nav, section, textarea, 
  button, input, div,footer {
     display:block;
-    font-family: tahoma;
+    font-family: arial, helvetica, sans-serif;
+    text-align: center; color:#003842;
 }
  
 .side  {
@@ -54,6 +55,7 @@ button {
     padding:1em;
     display: -webkit-inline-box;    
     background-color: #FFC9A7;
+    margin: 10px 0;
 }
 
 button:active {
@@ -85,12 +87,11 @@ button:active {
 
 
 // Styles for Unlocked Screen
-header {text-align: center; color:#003842;}
 .container {background-color: #DDCDB8; width: 100%; text-align: center; margin: 5px auto; padding:0;}
-.speaker {padding: 10px; width: 47%; text-align: center; height: 300px; margin: 0;}
+.speaker {padding: 0; width: 50%; text-align: center; height: 300px; margin: 0;}
 .a {background-color:  #97BFBE; float: left;}
 .b {background-color: #BCD0C4; float: right;}
-.button {width: 100%; padding: 10px; background-color: #DDCDB8; margin: 5px 0; text-align: center; clear: both; }
+.button {width: 100%; background-color: #DDCDB8; margin: 5px 0; text-align: center; clear: both; }
 #runningTimer {width: 100%; text-align: center; padding: 10px; background-color: #003842; color: white;}
 body {font-family: arial, helvetica, sans-serif;}
 h1 {font-weight: normal;}

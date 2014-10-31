@@ -1,43 +1,50 @@
-var s = 60;
-var m = 14;
+var s = 0;
+var m = 0;
 var h = 0;
 
-var pause = 1;
-var pauseA = 1;
-var pauseB = 1;
+var paused = 1;
 
-//start timer
+var interval = setInterval(increment, 10);
+
 function startA() {
     pause = 0;
     // enable pause button
     // disable A start button
     // pause counter B
 }
+
 function startB() {
     pause = 0;
     // enable pause button
     // disable B start button
     // pause counter B
 }
-//pause
-function pause(){
-	pause = 1;
-	//enable start buttons
-	//disable pause button
+
+function pause() {
+    pause = 1;
+    x = 0;
+    counterValue();
+    //enable start buttons
+    //disable pause button
 }
-//pauseA
-function pauseA(){
-	pauseA = 1;
+
+function end() {
+    pause = 1;
+    // disable pause and start buttons
+    // link to start
 }
-//pauseB
-function pauseB(){
-	pauseB = 1;
-}
-//end
-function end(){
-	pause = 1;
-	// disable pause and start buttons
-	// link to start
+
+function increment() { //every 60 seconds, reset seconds and increment minutes
+    if (pause == 0) {
+        s = s % 360 + 1;
+        if (s == 60) {
+            s = 0;
+            m++;
+        }
+	document.getElementById("timeBox").innerHTML = (h + ": " + m + ": " + s);
+    console.log(document.getElementById("timeBox").innerHTML);
+    console.log(h + ": " + m + ": " + s);
+    }
 }
 
 $(document).ready(function () {
@@ -61,18 +68,8 @@ $(document).ready(function () {
     });
 });
 
-function increment() { //every 60 seconds, reset seconds and increment minutes
-    if (pause == 0) {
-        s = s % 360 + 1;
-        if (s == 60) {
-            s = 0;
-            m++;
-        }
-        counterValue();
-    }
-}
 
 //update timer
 function counterValue() {
-    document.getElementById("timeBox").innerHTML = (h + ": " + m + ": " + s);
+    
 }
