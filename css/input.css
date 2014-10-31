@@ -1,0 +1,22 @@
+/****** RESET ******/
+ body {
+
+    margin: 500;
+    padding: 0;
+    background-color: #FFF;
+    font-size: 100%;
+    font-weight: arial, helvetica, sans-serif;
+}
+
+form {
+
+    text-align: center;
+}
+
+
+.StartButton {
+
+    margin: 10px auto;
+    text-align: center;
+}
+
