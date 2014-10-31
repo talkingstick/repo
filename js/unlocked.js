@@ -20,9 +20,8 @@ function startB() {
     // pause counter B
 }
 
-function pause() {
+function uPause() {
     pause = 1;
-    x = 0;
     counterValue();
     //enable start buttons
     //disable pause button
@@ -58,7 +57,7 @@ $(document).ready(function () {
         console.log('startedB');
     });
     $("#pause").click(function () {
-        pause();
+        uPause();
         console.log('paused');
     });
     $("#end").click(function () {
@@ -71,5 +70,7 @@ $(document).ready(function () {
 
 //update timer
 function counterValue() {
-    
+    document.getElementById("timeBox").innerHTML = (h + ": " + m + ": " + s);
+    console.log(document.getElementById("timeBox").innerHTML);
+    console.log(h + ": " + m + ": " + s);
 }
