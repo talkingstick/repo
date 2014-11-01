@@ -1,47 +1,97 @@
-/****** RESET ******/
- body {
+/*Input Page*/
+
+body {
     margin: 0;
     padding: 0;
+    background-color: #EEE;
+    font-size: 90%;
+    font-family: "Calibri", arial;
+}
+.header {
+    position: fixed;
     background-color: #FFF;
-    font-size: 100%;
-    font-weight: arial, helvetica, sans-serif;
+    border-bottom: solid 1px #DDD;
+    width: 100%;
+    top: 0;
+    height: 60px;
+}
+a.fa.fa-home {       
+    float: left;
+    font-size: 2.5em;
+    margin: 20px 10px 0px 20px ;
+}
+a {
+    text-decoration: none;
+    color: #111;
+}
+.wrapper {
+    border: solid 1px #CCC;
+    padding: 15px 25px 0px 20px;
+    background-color: #FFF;
+    border-radius: 10px;
+    margin: 75px 15px 10px 15px;
+    height: auto;
+}
+.startButton {
+    margin: 5px ;
+}
+.startButton button {
+    padding: 15px;
+    width: 100%;
+    background-color: green;
+    font-weight: bold;
+    color: #FFF;
+}
+.inputFields input {
+    border: solid 1px #CCC;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: left;
+    width: 100%;
+}
+.footer {
+    background-color: #555;
+    width: 100%;
+    bottom: 0;
+    z-index: -1;
+    padding: 10px 0px;
+    position: fixed;
+}
+a.fa.fa-github {
+    color: #FFF;
+    font-size: 2.5em;
+    margin: 10px 0px 0px 20px;
+}
+.footer p{
+    color: #FFF;
+    font-size: .7em;
+    margin: 10px 0px 0px 20px;
+}
 
-}
-/*Ensures that new structural elements are display:block for older browsers*/
- header, menu, nav, section, textarea, 
- button, input, div,footer {
-    display:block;
-    font-family: arial, helvetica, sans-serif;
-    text-align: center; color:#003842;
-}
- 
+/*locked*/ 
+
 .side  {
     float: left;
     width: 50%;
-    background-color: #DDD;
+    text-align: center;
+    border-radius: 5px;
+
     
 }
 .innerSide {
-    border: solid 6px #999; 
-    height: 300px;
-}
-
-.silent {
-    background-color: red;
-
-}
-
-.talking {
-    background-color: green;
+    height: 215px;
+    padding: 5px;
+    margin: 8px;
+    background-color: #EEE;
 }
  
 .timeBox {
-    border:solid 1px #EEE;
-    padding:1em;
-    text-align:center;
+    border: solid 1px #ccc;
+    padding: 1em;
+    text-align: center;
     background-color: white;
+    margin: 0px -9px;
 }
-
 .timeBox .bz{
     width: 100%; 
     text-align: center; 
@@ -53,13 +103,15 @@
 button {
     border:none;
     padding:1em;
-    display: -webkit-inline-box;    
     background-color: #FFC9A7;
     margin: 10px 0;
+    width: 100%;
+    font-weight: bold;
+    color: #555;
 }
-
 button:active {
     background-color:#003842;
+    color: #FFF;
 }
 .start {
     background-color: green;   
@@ -78,21 +130,22 @@ button:active {
 }
 
 .sideA, .sideB  {
-    transition-duration: 2s; 
+    transition-duration: 1.5s; 
 }
 
  #startA, #startB {
-    transition-duration: 1s; 
+    transition-duration: .5s; 
 }
 
 
 // Styles for Unlocked Screen
-.container {background-color: #DDCDB8; width: 100%; text-align: center; margin: 5px auto; padding:0;}
+//.container {background-color: #DDCDB8; width: 100%; text-align: center; margin: 5px auto; padding:0;}
 .speaker {padding: 0; width: 50%; text-align: center; height: 300px; margin: 0;}
 .a {background-color:  #97BFBE; float: left;}
 .b {background-color: #BCD0C4; float: right;}
 .button {width: 100%; background-color: #DDCDB8; margin: 5px 0; text-align: center; clear: both; }
 #runningTimer {width: 100%; text-align: center; padding: 10px; background-color: #003842; color: white;}
-body {font-family: arial, helvetica, sans-serif;}
-h1 {font-weight: normal;}
+//h1 {font-weight: normal;}
+
+
 

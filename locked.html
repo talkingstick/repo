@@ -3,23 +3,29 @@
 <html lang="en">
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+
+    <link href="css/font.css" rel="stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet" type="text/css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/locked.js" type="text/javascript"></script>
     <script src="js/jQ.js" type="text/javascript"></script>
-
-
-    <title>Locked Mode</title>
+    
+        <title>Locked Mode</title>
 </head>
 
-<body>
-    <div><a href="InputStart.html">Home</a></div>
-    <div class="side sideA">
-        <div class="innerSide">
-        A
+<body onload="pause();">
 
+    <div class="header">
+        <a class="fa fa-home" href="index.html"></a><h1>Talking Stick</h1>
+    </div>
+    <div class ="wrapper">
+    <div class="side ">
+        <div class="innerSide sideA">
+        <h3>A</h3>
         <div class="buttonBox">
-            <button id="startA" class="start">Start</button>
+            <button id="startA" class="start">START</button>
         </div>
 
         <div class="timeBox" id="timeBoxA">
@@ -29,12 +35,11 @@
         </div>
     </div>
 
-    <div class="side sideB">
-        <div class="innerSide">
-        B
-
+    <div class="side">
+        <div class="innerSide sideB">
+        <h3>B</h3>
         <div class="buttonBox">
-            <button id="startB" class="start">Start</button>
+            <button id="startB" class="start">START</button>
         </div>
 
         <div class="timeBox" id="timeBoxB">
@@ -45,5 +50,7 @@
     <button class="end" id="pause">Pause</button> 
     
     <button class="end" id="end">End</button>
+
+</div>
 </body>
 </html>

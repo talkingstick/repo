@@ -1,13 +1,51 @@
 <!DOCTYPE html>
+
 <html lang="en">
-    <head>
-	    <meta charset="utf-8">
-		<title>Talking Stick</title>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
 
-    </head>
 
-    <body>
-		<h1>Welcome to talking Stick!</h1>
-    </body>
+    <link href="css/font.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
 
- </html>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/index.js" type="text/javascript"></script>
+
+    <title>Start Page</title>
+</head>
+
+<body>
+
+    <div class="header">
+        <a class="fa fa-home" href="#"></a><h1>Talking Stick</h1>
+    </div>
+    <div class ="wrapper">
+
+    <div >
+        <form>
+            <div class="inputFields">
+            How Many Users: <br><input id="NumberofUsers" type="number" placeholder="2"><br>
+            <br>How Many Minutes: <br><input id="Session" type="number" placeholder="30">
+            </div>
+
+            <form action="" method="post">
+                <br>Choose Mode:<br>
+                <input id="locked" name="mode" type="radio" value="Locked" checked>Locked
+                <input id="unlocked" name="mode" type="radio" value="Unlocked">Unlocked
+            </form>
+        </form>
+    </div>
+    <div class="startButton">
+<button type="button" onclick="start()">START HERE</button>
+</div>
+
+    </div>
+
+    <div class="footer">
+        <a class="fa fa-github" href="https://github.com/talkingstick"></a>
+        <p>Shadi Kabajah | Beth Zonderman | Michelle Zaffino &copy; 2014</p>
+</div>
+
+</body>
+</html>

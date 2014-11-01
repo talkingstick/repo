@@ -15,7 +15,6 @@ var pauseB = 1;
 var intervalA = setInterval(decrementA, 1000);
 var intervalB = setInterval(decrementB, 1000);
 
-
 function decrementA() {
     if (pauseA == 0) {
         sA = sA % 360 - 1;
@@ -68,23 +67,22 @@ function pause() {
 function end() {
     pauseA = 1;
     pauseB = 1;
-
-    sA = 0;
-    sB = 0;
-    mA=0;
-    mB=0;
-    hA=0;
-    hB=0;
-
-
+    
     counterValueA();
     counterValueB();
+
+    localStorage.A=(mA);
+    localStorage.B=(mB);
+    
+    window.location.replace("analytics.html");
+
+
 }
 
 function counterValueA() {
-    document.getElementById("timeBoxA").innerHTML = ("Remaining Time: " +   mA + ": " + sA);
+    document.getElementById("timeBoxA").innerHTML = (mA + ": " + sA + "<br>Minutes Left");
 }
 
 function counterValueB() {
-    document.getElementById("timeBoxB").innerHTML = ("Remaining Time: " +  mB + ": " + sB);
+    document.getElementById("timeBoxB").innerHTML = (mB + ": " + sB +"<br>Minutes Left");
 }

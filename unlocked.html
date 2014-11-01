@@ -1,21 +1,25 @@
 <!DOCTYPE html>
+
 <html lang="en">
-    <head>
-  	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-    <meta content="width=device-width, initial-scale=1.0" name=
-    "viewport">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+
+    <link href="css/font.css" rel="stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet" type="text/css">
-    <script src=
-    "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/unlocked.js" type="text/javascript"></script>
-	<title>Talking Stick: Unlocked Mode</title>
+    <script src="js/jQ.js" type="text/javascript"></script>
+    
+        <title>Unlocked Mode</title>
+</head>
 
-    </head>
-
-    <body>
-		<header>
-			<h1>Talking Stick: Unlocked Session</h1>
-			<h2><a href="InputStart.html">Start new session</a></h2>
+<body>
+    <div class="header">
+        <a class="fa fa-home" href="index.html"></a><h1>Talking Stick</h1>
+    </div>
+    <div class ="wrapper">
 			
 			<p>Session Time Limit: <span id="sessionTime">X</span></p>
 			<div class="timeBox bz" id="timeBox">00:00:00</div>
@@ -23,11 +27,11 @@
 		</header>
 		
 		<div class="container">
-			<div class="speaker a" id="speakerA">
-				<button id="startA" class="start">Start</button>
+			<div class="speaker a sideA" id="speakerA">
+				<button id="startA" class="start">Start A</button>
 				<p>Time used: <span id="timeUsedA">X</span></p>
 			</div>
-			<div class="speaker b" id="speakerB">
+			<div class="speaker b sideB" id="speakerB">
 				<button id="startB" class="start">Start B</button>
 				<p>Time used: <span id="timeUsedB">X</span></p>
 			</div>
@@ -36,6 +40,8 @@
 
 		<div class="button"><button id="pause">Pause</button></div>
 		<div class="button"><button id="end">End</button></div>
+
+</div>
 
     </body>
 

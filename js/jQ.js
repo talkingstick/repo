@@ -3,7 +3,7 @@ $(document).ready(function () {
         startA();
         $('.sideA').css("background-color","green");
         $('#startA').css("visibility","hidden");
-        $('.sideB').css("background-color","#EEE");
+        $('.sideB').css("background-color","Crimson");
         $('#startB').css("visibility","visible");
         $('#pause').css("background-color","#EEE");
     });
@@ -12,7 +12,7 @@ $(document).ready(function () {
         startB();
         $('.sideB').css("background-color","green");
         $('#startB').css("visibility","hidden");
-        $('.sideA').css("background-color","#EEE");
+        $('.sideA').css("background-color","Crimson");
         $('#startA').css("visibility","visible");
         $('#pause').css("background-color","#EEE");
     });
