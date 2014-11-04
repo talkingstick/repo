@@ -2,9 +2,34 @@ var s = 0;
 var m = 0;
 var h = 0;
 
-var paused = 1;
 
+var sA = 0;
+var mA = 0;
+var hA = 0;
+
+var sB = 0;
+var mB = 0;
+var hB = 0;
+
+
+
+
+var session = parseInt(localStorage.Session);
+tR = session;
+var numberOfUsers  = parseInt(localStorage.numberOfUsers); // don't need this now
+
+var paused = 1;
 var interval = setInterval(increment, 10);
+
+// Display session time limit
+function sessionTimeLimit(){
+    document.getElementById("sessionTime").innerHTML = session;
+}
+
+// Display session time remaining at start
+function timeRemaining(){
+    document.getElementById("timeRemaining").innerHTML = session;
+}
 
 function startA() {
     pause = 0;
@@ -22,15 +47,10 @@ function startB() {
 
 function uPause() {
     pause = 1;
-    counterValue();
-    //enable start buttons
-    //disable pause button
 }
 
 function end() {
     pause = 1;
-    // disable pause and start buttons
-    // link to start
 }
 
 function increment() { //every 60 seconds, reset seconds and increment minutes
@@ -40,37 +60,34 @@ function increment() { //every 60 seconds, reset seconds and increment minutes
             s = 0;
             m++;
         }
-	document.getElementById("timeBox").innerHTML = (h + ": " + m + ": " + s);
-    console.log(document.getElementById("timeBox").innerHTML);
-    console.log(h + ": " + m + ": " + s);
+
+    	document.getElementById("timeBox").innerHTML = (h + ": " + m + ": " + s);
+
+        // update timeRemaining
+        tR = session - m;
+        document.getElementById("timeRemaining").innerHTML = (tR + " minutes");
     }
 }
 
+
 $(document).ready(function () {
+
+    sessionTimeLimit();
+    timeRemaining();
+
     $("#startA").click(function () {
         startA();
-        console.log('startedA');
     });
-
     $("#startB").click(function () {
         startB();
-        console.log('startedB');
     });
     $("#pause").click(function () {
         uPause();
-        console.log('paused');
     });
     $("#end").click(function () {
         end();
-
-        console.log('ended');
     });
 });
 
 
-//update timer
-function counterValue() {
-    document.getElementById("timeBox").innerHTML = (h + ": " + m + ": " + s);
-    console.log(document.getElementById("timeBox").innerHTML);
-    console.log(h + ": " + m + ": " + s);
-}
+
