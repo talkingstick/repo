@@ -26,7 +26,7 @@ a {
 }
 .wrapper {
     border: solid 1px #CCC;
-    padding: 15px 25px 5px 20px;
+    padding: 15px 25px 0px 20px;
     background-color: #FFF;
     border-radius: 10px;
     margin: 75px 15px 10px 15px;
@@ -92,13 +92,6 @@ a.fa.fa-github {
     background-color: white;
     margin: 0px -9px;
 }
-.timeBox .bz{
-    width: 100%; 
-    text-align: center; 
-    padding: 10px; 
-    background-color: #003842; 
-    color: white;
-}
 
 button {
     border:none;
@@ -136,18 +129,16 @@ button:active {
  #startA, #startB {
     transition-duration: .5s; 
 }
-h2 {
-    text-align: center;
-}
+
 
 // Styles for Unlocked Screen
-//.container {background-color: #DDCDB8; width: 100%; text-align: center; margin: 5px auto; padding:0;}
+// .container {background-color: #DDCDB8; width: 100%; text-align: center; margin: 5px auto; padding:0;}
 .speaker {padding: 0; width: 50%; text-align: center; height: 300px; margin: 0;}
 .a {background-color:  #97BFBE; float: left;}
 .b {background-color: #BCD0C4; float: right;}
 .button {width: 100%; background-color: #DDCDB8; margin: 5px 0; text-align: center; clear: both; }
 #runningTimer {width: 100%; text-align: center; padding: 10px; background-color: #003842; color: white;}
 //h1 {font-weight: normal;}
-
+.bz { width: 100%; text-align: center; }
 
 

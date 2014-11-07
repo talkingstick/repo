@@ -6,32 +6,28 @@
     <meta name="viewport" content="width=device-width, user-scalable=no" />
 
     <link href="css/font.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.min.css">
-    <link rel="stylesheet" href="css/donut.css">
-    <link rel="stylesheet" href="css/morris.css">
     <link href="css/main.css" rel="stylesheet" type="text/css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.min.js"></script>
-    <script src="js/morris.js"></script>
-
-    <script src="js/analytics.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/analytics.js" type="text/javascript"></script>
     <script src="js/jQ.js" type="text/javascript"></script>
     
         <title>Analytics</title>
 </head>
 
-<body onload="morris()">
+<body>
 
     <div class="header">
         <a class="fa fa-home" href="index.html"></a><h1>Talking Stick</h1>
     </div>
     <div class ="wrapper">
     
-    <h2>Result</h2>
-        <div id="graph"></div>
-        <div id="result"></div>
+    <button onclick="result();">Results</button>
+        <div class="side" id="sideA">
+        </div>
+        <div class="side" id="sideB">
+        </div>
+        
 
     </div>
 </body>
