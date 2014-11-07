@@ -6,8 +6,6 @@ Impetus (Aboriginal Tribe): http://en.wikipedia.org/wiki/Talking_stick
 
 Hello - We would like to invite you to test the Talking Stick App! The app moderates conversation between users.
 
-You can access the app at the following link: https://dl.dropboxusercontent.com/u/51209953/TalkingStick/index.html
-
 Once you have the app up, we would like you and a friend to run the following scenarios:
 
 Scenario 1
