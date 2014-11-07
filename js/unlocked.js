@@ -38,6 +38,11 @@ function end() {
     pause = 1;
     pauseA = 1;
     pauseB = 1;
+
+
+    localStorage.lA = 0;
+    localStorage.lB = 0;
+
     localStorage.uA = mA; //pass this to analytics
     localStorage.uB = mB; //pass this to analytics
 
@@ -57,7 +62,16 @@ function increment() { //every 60 seconds, reset seconds and increment minutes
 
         // update session timeRemaining
         tR = session - m;
+        console.log("tR within the increment function", tR);
         document.getElementById("timeRemaining").innerHTML = (tR + " minutes");
+
+        if (tR === 0) {
+                end();
+        }
+        document.getElementById("end").innerHTML = ("Time is up. View analytics.");
+
+
+
     }
 }
 
@@ -118,6 +132,7 @@ $(document).ready(function () {
 
     sessionTimeLimit();
     timeRemaining();
+    stopAtTimeLimit();
 
     if (tR === 0) {
         end();
