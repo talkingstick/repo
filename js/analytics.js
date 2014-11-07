@@ -4,19 +4,19 @@ var mode = localStorage.mode;
 console.log(session);
 if (mode =="locked")  {
 
-var mAspoken = (session/2) - parseInt(localStorage.lA);
-var mBspoken = (session/2) - parseInt(localStorage.lB);
-console.log(mAspoken,mBspoken);
-var mA = mAspoken/(mAspoken+mBspoken)*100;
-var mB = mBspoken/(mAspoken+mBspoken)*100;
+    var mAspoken = (session/2) - parseInt(localStorage.lA);
+    var mBspoken = (session/2) - parseInt(localStorage.lB);
+    console.log(mAspoken,mBspoken);
+    var mA = mAspoken/(mAspoken+mBspoken)*100;
+    var mB = mBspoken/(mAspoken+mBspoken)*100;
 
 console.log(mA,mB);
 } else if (mode == "unlocked") {
-  var mAspoken = parseInt(localStorage.uA);
-  var mBspoken = parseInt(localStorage.uB);
-  console.log(mAspoken,mBspoken);
-  var mA = mAspoken/(mAspoken+mBspoken)*100;
-  var mB = mBspoken/(mAspoken+mBspoken)*100;
+    var mAspoken = parseInt(localStorage.uA);
+    var mBspoken = parseInt(localStorage.uB);
+    console.log(mAspoken,mBspoken);
+    var mA = mAspoken/(mAspoken+mBspoken)*100;
+    var mB = mBspoken/(mAspoken+mBspoken)*100;
 } 
 
  function result () {
