@@ -75,8 +75,6 @@ function end() {
     localStorage.B=(mB);
     
     window.location.replace("analytics.html");
-
-
 }
 
 function counterValueA() {

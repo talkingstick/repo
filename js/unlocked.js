@@ -1,72 +1,116 @@
 var s = 0;
 var m = 0;
 var h = 0;
-
-
 var sA = 0;
 var mA = 0;
 var hA = 0;
-
 var sB = 0;
 var mB = 0;
 var hB = 0;
 
-
-
-
 var session = parseInt(localStorage.Session);
-tR = session;
-var numberOfUsers  = parseInt(localStorage.numberOfUsers); // don't need this now
+var tR = session; //at start, time Remaining = session time
 
-var paused = 1;
+var pause = 1;
+var pauseA = 1;
+var pauseB = 1; 
 var interval = setInterval(increment, 10);
+var intA = setInterval(intervalA, 10);
+var intB = setInterval(intervalB, 10);
 
 // Display session time limit
-function sessionTimeLimit(){
+function sessionTimeLimit() {
     document.getElementById("sessionTime").innerHTML = session;
 }
 
 // Display session time remaining at start
-function timeRemaining(){
+function timeRemaining() {
     document.getElementById("timeRemaining").innerHTML = session;
 }
 
-function startA() {
-    pause = 0;
-    // enable pause button
-    // disable A start button
-    // pause counter B
-}
-
-function startB() {
-    pause = 0;
-    // enable pause button
-    // disable B start button
-    // pause counter B
-}
-
 function uPause() {
+    pauseA = 1;
+    pauseB = 1;
     pause = 1;
 }
 
 function end() {
     pause = 1;
+    pauseA = 1;
+    pauseB = 1;
+    localStorage.A = mA;
+    localStorage.B = mB;
+    
+   //document.getElementById("end").innerHTML = ("Time is up. View analytics.");
+    window.location.replace("analytics.html");
 }
 
 function increment() { //every 60 seconds, reset seconds and increment minutes
-    if (pause == 0) {
+    if (pause === 0) {
         s = s % 360 + 1;
         if (s == 60) {
             s = 0;
             m++;
         }
+        //update session timer
+        document.getElementById("timeBox").innerHTML = (h + ": " + m + ": " + s);
 
-    	document.getElementById("timeBox").innerHTML = (h + ": " + m + ": " + s);
-
-        // update timeRemaining
+        // update session timeRemaining
         tR = session - m;
         document.getElementById("timeRemaining").innerHTML = (tR + " minutes");
     }
+}
+
+///function stopAtTimelimit
+function stopAtTimeLimit() {
+    console.log('timeRemaining: ', tR);
+    if (tR === 0) {
+        end();
+    }
+    document.getElementById("end").innerHTML = ("Time is up. View analytics.");
+    //window.location.replace("analytics.html");
+}
+
+function intervalA(){
+    if (pauseA === 0) {
+        sA = sA % 360 + 1;
+            if (sA == 60) {
+                sA = 0;
+                mA++;
+            }
+        timeUsedA();
+    }
+
+}
+function intervalB(){
+    if (pauseB == 0) {
+        sB = sB % 360 + 1;
+            if (sB == 60) {
+                sB = 0;
+                mB++;
+            }
+    timeUsedB();
+    }
+}
+
+function timeUsedA() {
+    document.getElementById("timeUsedA").innerHTML = mA;
+}
+
+function timeUsedB() {
+    document.getElementById("timeUsedB").innerHTML = mB;
+}
+
+function startA() { // A0 B1 u0
+    pause = 0;
+    pauseA = 0;
+    pauseB = 1;
+}
+
+function startB() {
+    pause = 0;
+    pauseA = 1;
+    pauseB = 0;
 }
 
 
@@ -75,8 +119,15 @@ $(document).ready(function () {
     sessionTimeLimit();
     timeRemaining();
 
+    if (tR === 0) {
+        end();
+    }
+    timeUsedA();
+    timeUsedB();
+
     $("#startA").click(function () {
         startA();
+        timeUsedA();
     });
     $("#startB").click(function () {
         startB();
@@ -87,7 +138,5 @@ $(document).ready(function () {
     $("#end").click(function () {
         end();
     });
+
 });
-
-
-
