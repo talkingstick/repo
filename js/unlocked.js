@@ -38,9 +38,9 @@ function end() {
     pause = 1;
     pauseA = 1;
     pauseB = 1;
-    localStorage.A = mA;
-    localStorage.B = mB;
-    
+    localStorage.uA = mA; //pass this to analytics
+    localStorage.uB = mB; //pass this to analytics
+
    //document.getElementById("end").innerHTML = ("Time is up. View analytics.");
     window.location.replace("analytics.html");
 }
