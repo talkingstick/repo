@@ -12,8 +12,8 @@ var hB = 0;
 var pauseA = 1;
 var pauseB = 1;
 
-var intervalA = setInterval(decrementA, 1000);
-var intervalB = setInterval(decrementB, 1000);
+var intervalA = setInterval(decrementA, 10); //10 for testing use 1000 for real time
+var intervalB = setInterval(decrementB, 10); //10 for testing use 1000 for real time
 
 function decrementA() {
     if (pauseA == 0) {
@@ -68,9 +68,6 @@ function end() {
     pauseA = 1;
     pauseB = 1;
     
-    counterValueA();
-    counterValueB();
-
     localStorage.A=(mA);
     localStorage.B=(mB);
     
@@ -79,8 +76,14 @@ function end() {
 
 function counterValueA() {
     document.getElementById("timeBoxA").innerHTML = (mA + ": " + sA + "<br>Minutes Left");
+    if (mA<=0&&sA<=0) {
+        end();
+    }
 }
 
 function counterValueB() {
     document.getElementById("timeBoxB").innerHTML = (mB + ": " + sB +"<br>Minutes Left");
+    if (mB<=0&&sB<=0) {
+        end();
+    }
 }
