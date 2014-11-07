@@ -68,8 +68,11 @@ function end() {
     pauseA = 1;
     pauseB = 1;
     
-    localStorage.A=(mA);
-    localStorage.B=(mB);
+    localStorage.uA=0;
+    localStorage.uB=0;
+    localStorage.mode="locked";
+    localStorage.lA=mA;
+    localStorage.lB=mB;
     
     window.location.replace("analytics.html");
 }
