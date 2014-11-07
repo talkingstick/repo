@@ -42,7 +42,7 @@ function end() {
 
     localStorage.lA = 0;
     localStorage.lB = 0;
-
+    localStorage.mode = "unlocked";
     localStorage.uA = mA; //pass this to analytics
     localStorage.uB = mB; //pass this to analytics
 
