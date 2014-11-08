@@ -38,8 +38,6 @@ function end() {
     pause = 1;
     pauseA = 1;
     pauseB = 1;
-
-
     localStorage.lA = 0;
     localStorage.lB = 0;
     localStorage.mode = "unlocked";
@@ -69,9 +67,6 @@ function increment() { //every 60 seconds, reset seconds and increment minutes
                 end();
         }
         document.getElementById("end").innerHTML = ("Time is up. View analytics.");
-
-
-
     }
 }
 
