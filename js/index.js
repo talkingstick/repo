@@ -1,5 +1,12 @@
-
-
+function checkVisit () {
+	console.log(localStorage.visit);
+	if (localStorage.visit == "undefined") {
+		document.getElementById("instructions").style.visibility="visible";
+		console.log(localStorage.visit);
+	} else if (localStorage.visit == "old") {
+		document.getElementById("instructions").style.visibility="hidden";
+	}
+}
 function start () {
     localStorage.numberOfUsers = document.getElementById("NumberofUsers").value;
     localStorage.Session = document.getElementById("Session").value;
