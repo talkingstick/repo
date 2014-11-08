@@ -39,6 +39,11 @@ i.fa.fa-times {
     font-size: 2em;
     color: #fff;
 }
+#instructions p{
+    color: #fff;
+    padding: 20px;
+    font-size: 1.5em;
+}
 .wrapper {
     border: solid 1px #CCC;
     padding: 15px 25px 5px 20px;
