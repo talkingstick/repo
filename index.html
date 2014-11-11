@@ -5,11 +5,14 @@
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta name="viewport" content="width=device-width, user-scalable=no" />
 
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
 
     <link href="css/font.css" rel="stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet" type="text/css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+
     <script src="js/index.js" type="text/javascript"></script>
     <script src="js/jQ.js" type="text/javascript"></script>
 
@@ -21,21 +24,31 @@
     <div class="header">
         <a class="fa fa-home" href="#"></a><h1>Talking Stick</h1>
     </div>
-    <div id="instructions"><i id="closeInstr" class="fa fa-times"></i></div>
+    <div id="instructions"><i id="closeInstr" class="fa fa-times"></i>
+        <p><strong>Talking Stick App:</strong><br>
+        <br>The app moderates conversation between two users.
+        <br>Fill in the names of the users, and choose how long the session should be in minutes.
+        <br>Choose the mode:<br>(locked to cut the time in half for the two users. Unlocked to let it go and then give you a self evaliation),<br>then hit on Start !
+        </p>
+    </div>
     <div class ="wrapper">
 
     <div >
         <form>
             <div class="inputFields">
-            How Many Users: <br><input id="NumberofUsers" type="number" placeholder="2"><br>
-            <br>How Many Minutes: <br><input id="Session" type="number" placeholder="30">
-            </div>
+            <label>Who is talking ?</label>
+            <input id="nameA" type="text" placeholder="Name of Person A"><br>
+            <input id="nameB" type="text" placeholder="Name of Person B"><br>
 
-            <form action="" method="post">
-                <br>Choose Mode:<br>
-                <input id="locked" name="mode" type="radio" value="Locked" checked>Locked
-                <input id="unlocked" name="mode" type="radio" value="Unlocked">Unlocked
-            </form>
+
+
+
+            <label for="slider-fill">How Many Minutes:</label>
+            <input type="range" name="slider-fill" id="slider" value="20" min="4" max="60" data-highlight="false" step="2" />
+            <label>Choose Mode:</label>
+            <input id="locked" name="mode" type="radio" value="Locked" checked>Locked
+            <input id="unlocked" name="mode" type="radio" value="Unlocked">Unlocked
+            </div>
         </form>
     </div>
     <div class="startButton">
@@ -45,7 +58,8 @@
     </div>
 
     <div class="footer">
-        <a class="fa fa-github" href="https://github.com/talkingstick"></a>
+        <p>Find Us on Github:</p>
+            <a class="fa fa-github" href="https://github.com/talkingstick/repo" target="_blank"></a>
         <p>Shadi Kabajah | Beth Zonderman | Michelle Zaffino &copy; 2014</p>
 </div>
 </body>
