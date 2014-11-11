@@ -74,14 +74,18 @@ input#slider {
     padding: 5px;
     text-align: left;
 }
-.ui-radio {
-    display: inline-flex;
+.chooseMode {
+    margin-bottom: 10px;
+    display: flex;
 }
 .chooseMode span {
-    margin: 50px;
+    margin: 3px 40px;
+    display: inline-flex;
+    float: left;
 }
-.chooseMode {
-    margin-bottom: 20px;
+.ui-radio {
+    display: inline-flex;
+    float: left;
 }
 .footer {
     background-color: #555;
