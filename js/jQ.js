@@ -40,4 +40,7 @@ $(document).ready(function () {
         $('#instructions').css("display","none");
         localStorage.visit = "old";
     });
+    $( ".fa-refresh" ).click(function() {
+         location.reload();
+    });
 });
