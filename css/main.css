@@ -73,7 +73,15 @@ input#slider {
     border-radius: 5px;
     padding: 5px;
     text-align: left;
-    width: 100%;
+}
+.ui-radio {
+    display: inline-flex;
+}
+.chooseMode span {
+    margin: 50px;
+}
+.chooseMode {
+    margin-bottom: 20px;
 }
 .footer {
     background-color: #555;
@@ -130,7 +138,6 @@ button {
     padding:1em;
     background-color: #FFC9A7;
     margin: 10px 0;
-    width: 100%;
     font-weight: bold;
     color: #555;
 }
