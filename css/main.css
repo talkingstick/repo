@@ -164,7 +164,12 @@ button:active {
 h2 {
     text-align: center;
 }
-
+button.fa.fa-refresh {
+    top: 5px;
+    position: absolute;
+    right: 10px;
+    width: 50px;
+}
 // Styles for Unlocked Screen
 //.container {background-color: #DDCDB8; width: 100%; text-align: center; margin: 5px auto; padding:0;}
 .speaker {padding: 0; width: 50%; text-align: center; height: 300px; margin: 0;}
