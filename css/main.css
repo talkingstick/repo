@@ -19,30 +19,36 @@ a.fa.fa-home {
     float: left;
     font-size: 2.5em;
     margin: 20px 10px 0px 20px ;
+    color: #4AA;
+    font-weight: normal;
 }
 a {
     text-decoration: none;
-    color: #111;
 }
 #instructions {
     width: 100%;
-    background-color: #888;
-    height: 400px;
+    background-color: #555;
+    height: 100%;
     position: fixed;
-    top: 60px;
-    opacity: .8;
+    top: 0;
+    opacity: .9;
     visibility: visible;
+    z-index: 10;
 }
 i.fa.fa-times {
     float: right;
     margin: 10px;
-    font-size: 2em;
+    font-size: 2.5em;
     color: #fff;
 }
 #instructions p{
     color: #fff;
     padding: 20px;
-    font-size: 1.5em;
+    font-weight: normal;
+    font-size: 1em;
+}
+input#slider {
+    width: 98%;
 }
 .wrapper {
     border: solid 1px #CCC;
@@ -73,16 +79,15 @@ i.fa.fa-times {
     background-color: #555;
     width: 100%;
     bottom: 0;
-    z-index: -1;
     padding: 10px 0px;
-    position: fixed;
+    position: relative;
 }
 a.fa.fa-github {
     color: #FFF;
     font-size: 2.5em;
     margin: 10px 0px 0px 20px;
 }
-.footer p{
+.footer p {
     color: #FFF;
     font-size: .7em;
     margin: 10px 0px 0px 20px;
@@ -170,4 +175,8 @@ h2 {
 //h1 {font-weight: normal;}
 
 
+* {
+    text-shadow:0 0 0 transparent;
+    text-shadow:none;
+}
 

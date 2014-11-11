@@ -1,6 +1,6 @@
 var session = parseInt(localStorage.Session);
-var numberOfUsers  = parseInt(localStorage.numberOfUsers);
- 
+var numberOfUsers  = 2;
+
 var sA = 0;
 var mA = Math.round(session/numberOfUsers);
 var hA = 0;
@@ -12,8 +12,8 @@ var hB = 0;
 var pauseA = 1;
 var pauseB = 1;
 
-var intervalA = setInterval(decrementA, 10); //10 for testing use 1000 for real time
-var intervalB = setInterval(decrementB, 10); //10 for testing use 1000 for real time
+var intervalA = setInterval(decrementA, 100); //10 for testing use 1000 for real time
+var intervalB = setInterval(decrementB, 100); //10 for testing use 1000 for real time
 
 function decrementA() {
     if (pauseA == 0) {
@@ -46,19 +46,29 @@ function decrementB() {
 }
 
 function startA() {
-    pauseA = 0;
-    pauseB = 1;
+    if (mA==0&&sA==0) {
+        pauseA = 1;
+    } else {
+        pauseA = 0;
+        pauseB = 1;
+    }
 }
 
 function startB() {
-    pauseA = 1;
-    pauseB = 0;
+    if (mB<=0&&sB<=0) {
+        pauseB = 1;
+    } else {
+        pauseA = 1;
+        pauseB = 0;
+    }
 }
 
 function pause() {
     pauseA = 1;
     pauseB = 1;
  
+    document.getElementById('nameA').innerHTML = localStorage.nameA;
+    document.getElementById('nameB').innerHTML = localStorage.nameB;
 
     counterValueA();
     counterValueB();
@@ -80,13 +90,15 @@ function end() {
 function counterValueA() {
     document.getElementById("timeBoxA").innerHTML = (mA + ": " + sA + "<br>Minutes Left");
     if (mA<=0&&sA<=0) {
-        end();
+        pauseA=1;
+        document.getElementById("timeBoxA").innerHTML = ("Time's Up!");
     }
 }
 
 function counterValueB() {
     document.getElementById("timeBoxB").innerHTML = (mB + ": " + sB +"<br>Minutes Left");
     if (mB<=0&&sB<=0) {
-        end();
+        pauseB=1;
+        document.getElementById("timeBoxB").innerHTML = ("Time's Up!");
     }
 }

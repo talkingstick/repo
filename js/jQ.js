@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    
     $("#startA").click(function () {
         startA();
         $('.sideA').css("background-color","green");
@@ -38,6 +39,5 @@ $(document).ready(function () {
     $("#closeInstr").click(function () {
         $('#instructions').css("display","none");
         localStorage.visit = "old";
-
     });
 });
