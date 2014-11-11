@@ -27,7 +27,7 @@ a {
 }
 #instructions {
     width: 100%;
-    background-color: #555;
+    background-color: #000;
     height: 100%;
     position: fixed;
     top: 0;
@@ -41,12 +41,22 @@ i.fa.fa-times {
     font-size: 2.5em;
     color: #fff;
 }
-#instructions p{
-    color: #fff;
+#instructions div{
+    margin: 30px auto;
+    width: 75%;
     padding: 20px;
-    font-weight: normal;
-    font-size: 1em;
+    background-color: white;
+    color: black;
+    opacity: 1.0;
+    opacity: 1;
 }
+#instructions p{
+    font-weight: normal;
+    font-size: 1.5em;
+    line-height: 140%;
+}
+#instructions h1 {text-align: center; color: black; font-weight: bold;}
+
 input#slider {
     width: 98%;
 }
@@ -57,6 +67,7 @@ input#slider {
     border-radius: 10px;
     margin: 75px 15px 10px 15px;
     height: auto;
+    text-align: center;
 }
 .startButton {
     margin: 5px ;
@@ -171,14 +182,14 @@ button.fa.fa-refresh {
     width: 50px;
 }
 // Styles for Unlocked Screen
-//.container {background-color: #DDCDB8; width: 100%; text-align: center; margin: 5px auto; padding:0;}
+.container {background-color: #DDCDB8; width: 100%; text-align: center; margin: 5px auto; padding:0;}
 .speaker {padding: 0; width: 50%; text-align: center; height: 300px; margin: 0;}
 .a {background-color:  #97BFBE; float: left;}
 .b {background-color: #BCD0C4; float: right;}
 .button {width: 100%; background-color: #DDCDB8; margin: 5px 0; text-align: center; clear: both; }
 #runningTimer {width: 100%; text-align: center; padding: 10px; background-color: #003842; color: white;}
-//h1 {font-weight: normal;}
-
+h1 {font-weight: normal;}
+.endActive { background-color: red;}
 
 * {
     text-shadow:0 0 0 transparent;

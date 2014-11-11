@@ -43,8 +43,12 @@ function end() {
     localStorage.mode = "unlocked";
     localStorage.uA = mA; //pass this to analytics
     localStorage.uB = mB; //pass this to analytics
+    document.getElementById("end").innerHTML = ("<a href='analytics.html' rel='external'>Time is up. View analytics.</a>");
 
-   document.getElementById("end").innerHTML = ("Time is up. View analytics.");
+    var e;
+    e = document.getElementById("end");
+    e.className = e.className + " endActive" ; // adding new class name
+
 }
 
 function increment() { //every 60 seconds, reset seconds and increment minutes
@@ -63,9 +67,8 @@ function increment() { //every 60 seconds, reset seconds and increment minutes
         document.getElementById("timeRemaining").innerHTML = (tR + " minutes");
 
         if (tR === 0) {
-                end();
+            end();
         }
-        document.getElementById("end").innerHTML = ("Time is up. View analytics.");
     }
 }
 
@@ -75,7 +78,6 @@ function stopAtTimeLimit() {
     if (tR === 0) {
         end();
     }
-    document.getElementById("end").innerHTML = ("Time is up. View analytics.");
     
 }
 

@@ -33,10 +33,11 @@ $(document).ready(function () {
         $('#startB').css("visibility","visible");
         $('.sideA').css("background-color","#EEE");
         $('#startA').css("visibility","visible");
-        $('#pause').css("background-color","#EEE");
+        $('#pause').css("background-color","#EEE");   
+        $('#end').css("background-color","#f60");
     });
 
-    $("#closeInstr").click(function () {
+    $("#instructions").click(function () {
         $('#instructions').css("display","none");
         localStorage.visit = "old";
     });
