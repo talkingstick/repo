@@ -44,8 +44,7 @@ function end() {
     localStorage.uA = mA; //pass this to analytics
     localStorage.uB = mB; //pass this to analytics
 
-   //document.getElementById("end").innerHTML = ("Time is up. View analytics.");
-    window.location.replace("analytics.html");
+   document.getElementById("end").innerHTML = ("Time is up. View analytics.");
 }
 
 function increment() { //every 60 seconds, reset seconds and increment minutes
@@ -77,7 +76,7 @@ function stopAtTimeLimit() {
         end();
     }
     document.getElementById("end").innerHTML = ("Time is up. View analytics.");
-    //window.location.replace("analytics.html");
+    
 }
 
 function intervalA(){

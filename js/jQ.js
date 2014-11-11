@@ -34,4 +34,10 @@ $(document).ready(function () {
         $('#startA').css("visibility","visible");
         $('#pause').css("background-color","#EEE");
     });
+
+    $("#closeInstr").click(function () {
+        $('#instructions').css("display","none");
+        localStorage.visit = "old";
+
+    });
 });

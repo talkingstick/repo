@@ -11,15 +11,17 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/index.js" type="text/javascript"></script>
+    <script src="js/jQ.js" type="text/javascript"></script>
 
     <title>Start Page</title>
 </head>
 
-<body>
+<body onload="checkVisit()">
 
     <div class="header">
         <a class="fa fa-home" href="#"></a><h1>Talking Stick</h1>
     </div>
+    <div id="instructions"><i id="closeInstr" class="fa fa-times"></i></div>
     <div class ="wrapper">
 
     <div >
@@ -46,6 +48,5 @@
         <a class="fa fa-github" href="https://github.com/talkingstick"></a>
         <p>Shadi Kabajah | Beth Zonderman | Michelle Zaffino &copy; 2014</p>
 </div>
-
 </body>
 </html>

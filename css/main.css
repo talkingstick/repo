@@ -24,6 +24,26 @@ a {
     text-decoration: none;
     color: #111;
 }
+#instructions {
+    width: 100%;
+    background-color: #888;
+    height: 400px;
+    position: fixed;
+    top: 60px;
+    opacity: .8;
+    visibility: visible;
+}
+i.fa.fa-times {
+    float: right;
+    margin: 10px;
+    font-size: 2em;
+    color: #fff;
+}
+#instructions p{
+    color: #fff;
+    padding: 20px;
+    font-size: 1.5em;
+}
 .wrapper {
     border: solid 1px #CCC;
     padding: 15px 25px 5px 20px;
