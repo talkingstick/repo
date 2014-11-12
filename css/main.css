@@ -65,7 +65,7 @@ input#slider {
     padding: 15px 25px 5px 20px;
     background-color: #FFF;
     border-radius: 10px;
-    margin: 75px 15px 10px 15px;
+    margin: 75px 15px 15px 15px;
     height: auto;
 }
 .startButton {
@@ -84,18 +84,18 @@ input#slider {
     padding: 5px;
     text-align: left;
 }
-.chooseMode {
-    margin-bottom: 10px;
+.modeButtons {
+    width: 90%;
+    margin: 5px auto;
     display: flex;
 }
-.chooseMode span {
-    margin: 60px 100px 0px 0px;
-    display: inline;
+.ui-radio {
+    width: 49%;
+    margin: 0;
     float: left;
 }
-.ui-radio {
-    display: inline;
-    float: left;
+label.ui-btn.ui-corner-all.ui-btn-inherit.ui-btn-icon-left {
+    font-size: .9em;
 }
 .footer {
     background-color: #555;
