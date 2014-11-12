@@ -89,12 +89,12 @@ input#slider {
     display: flex;
 }
 .chooseMode span {
-    margin: 3px 40px;
-    display: inline-flex;
+    margin: 60px 100px 0px 0px;
+    display: inline;
     float: left;
 }
 .ui-radio {
-    display: inline-flex;
+    display: inline;
     float: left;
 }
 .footer {
