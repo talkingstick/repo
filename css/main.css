@@ -35,6 +35,21 @@ a {
     visibility: visible;
     z-index: 10;
 }
+
+#instructionsContent { 
+    position: absolute;
+    z-index: 999;
+    visibility: visible;
+    width: 100%;
+    padding: 20px;
+    font-family: 'Patrick Hand', cursive, 'comic-sans'; color: white;
+    font-size: 20px; 
+}
+#instructionsContent div {margin: auto; width: auto;}
+#instructionsContent div p.headline1 { 
+    font-size: 40px; text-align: center;
+}
+
 i.fa.fa-times {
     float: right;
     margin: 10px;
@@ -206,6 +221,8 @@ h1 {font-weight: normal;}
     text-shadow:none;
 }
 
+<<<<<<< HEAD
+=======
 //coachmarks screen
 #instructionsContent { 
     background-color: pink;
@@ -214,3 +231,4 @@ h1 {font-weight: normal;}
     border: thick solid green;
 }
 #instructionsContent headline1 {font-family: 'Patrick Hand', cursive, 'comic-sans'; color: purple;}
+>>>>>>> c8abeb2f82847bbc718c26ae6b44e7e8ab6bf63b
