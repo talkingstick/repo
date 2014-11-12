@@ -3,17 +3,14 @@
 <html lang="en">
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-    <meta content="width=device-width, user-scalable=no" name="viewport">
-    <link href="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" rel="stylesheet">
-    <link href="css/font.css" rel="stylesheet" type="text/css">
-    <link href="css/main.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, user-scalable=no" />
 
-
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
-    <link rel="stylesheet" href="css/font.css">
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Patrick+Hand">
+
+    <link href="css/font.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
     <script src="js/index.js" type="text/javascript"></script>
@@ -60,10 +57,10 @@
 
                     <div class="chooseMode">
                         Choose Mode:<br>
-                        <input checked id="locked" name="mode" type="radio"
-                        value="Locked">
-                        <label for="locked">Locked</label> 
-                        <input id="unlocked" name="mode" type="radio" value="Unlocked"><label for="unlocked">Unlocked</label>
+                        <div class="modeButtons">
+                            <input checked id="locked" name="mode" type="radio" value="Locked"><label for="locked">Locked</label> 
+                            <input id="unlocked" name="mode" type="radio" value="Unlocked"><label for="unlocked">Unlocked</label>
+                        </div>
                     </div>
                 </div>
             </form>
