@@ -48,7 +48,6 @@ function end() {
     var e;
     e = document.getElementById("end");
     e.className = e.className + " endActive" ; // adding new class name
-
 }
 
 function increment() { //every 60 seconds, reset seconds and increment minutes
@@ -74,11 +73,9 @@ function increment() { //every 60 seconds, reset seconds and increment minutes
 
 ///function stopAtTimelimit
 function stopAtTimeLimit() {
-    console.log('timeRemaining: ', tR);
     if (tR === 0) {
         end();
     }
-    
 }
 
 function intervalA(){
@@ -90,7 +87,6 @@ function intervalA(){
             }
         timeUsedA();
     }
-
 }
 function intervalB(){
     if (pauseB == 0) {
@@ -99,16 +95,8 @@ function intervalB(){
                 sB = 0;
                 mB++;
             }
-    timeUsedB();
+        timeUsedB();
     }
-}
-
-function timeUsedA() {
-    document.getElementById("timeUsedA").innerHTML = mA;
-}
-
-function timeUsedB() {
-    document.getElementById("timeUsedB").innerHTML = mB;
 }
 
 function startA() { // A0 B1 u0
@@ -123,7 +111,6 @@ function startB() {
     pauseB = 0;
 }
 
-
 $(document).ready(function () {
 
     sessionTimeLimit();
@@ -133,8 +120,6 @@ $(document).ready(function () {
     if (tR === 0) {
         end();
     }
-    timeUsedA();
-    timeUsedB();
 
     $("#startA").click(function () {
         startA();
