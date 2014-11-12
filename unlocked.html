@@ -4,18 +4,20 @@
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta name="viewport" content="width=device-width, user-scalable=no" />
-    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
 
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
     <link href="css/font.css" rel="stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet" type="text/css">
 
- <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
-        <script src="js/unlocked.js" type="text/javascript"></script>
-        <title>Unlocked Mode</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script><script src="js/unlocked.js" type="text/javascript"></script>
+    <script src="js/jQ.js" type="text/javascript"></script>
+
+    <title>Locked Mode</title>
 </head>
 
-<body>
+
+<body onload="pause();">
     <div class="header">
         <a class="fa fa-home" href="index.html" rel="external"></a><h1>Talking Stick</h1>
     </div>
@@ -26,29 +28,27 @@
 		<div class="timeBox" id="timeBox">00:00:00</div>
 		<h2>Time Remaining: <span id="timeRemaining">X</span> minutes</h2>
 			
-		<div class="container">
 
-	        <div class="side ">
-	            <div class="innerSide sideA speaker a">
-	                <h3 id="nameA">A</h3>
-	                <div class="buttonBox">
-	                    <button id="startA" class="start"><i class="fa fa-play"></i></button>
-	                </div>
-	            </div><!-- end .innerSide .sideA -->
-	        </div><!-- end .side -->
+        <div class="side ">
+            <div class="innerSide sideA">
+                <h3 id="nameA">A</h3>
+                <div class="buttonBox">
+                    <button id="startA" class="start"><i class="fa fa-play"></i></button>
+                </div>
+            </div><!-- end .innerSide .sideA -->
+        </div><!-- end .side -->
 
 
-			<div class="side">
-	            <div class="innerSide sideB speaker b" id="speakerB">
-	                <h3 id="nameB">B</h3>
-	                <div class="buttonBox">
-	                    <button id="startB" class="start"><i class="fa fa-play"></i></button>
-	                </div>
-	            </div><!-- end .innerSide .sideB -->
-	        </div> <!-- end .side -->
+		<div class="side">
+            <div class="innerSide sideB" id="speakerB">
+                <h3 id="nameB">B</h3>
+                <div class="buttonBox">
+                    <button id="startB" class="start"><i class="fa fa-play"></i></button>
+                </div>
+            </div><!-- end .innerSide .sideB -->
+        </div> <!-- end .side -->
 
-		</div><!-- end .container -->
-		
+
 		<button class="end" id="pause"><i class="fa fa-pause"></i></button>         
         <button class="end" id="end"><i class="fa fa-stop"></i></button>
 	    
