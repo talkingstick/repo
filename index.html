@@ -5,10 +5,10 @@
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta name="viewport" content="width=device-width, user-scalable=no" />
 
-    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
-
-    <link href="css/font.css" rel="stylesheet" type="text/css">
-    <link href="css/main.css" rel="stylesheet" type="text/css">
+<!--    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css"> -->
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Patrick+Hand">
 
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
@@ -22,53 +22,53 @@
 <body onload="checkVisit()">
 
     <div class="header">
-        <a class="fa fa-home" href="#"></a><h1>Talking Stick</h1>
+        <a class="fa fa-home" href="#"></a>
+        <h1>Talking Stick</h1>
     </div>
 
-    <div id="instructions"><i id="closeInstr" class="fa fa-times"></i>
-        <div>
-            <h1>Welcome to Talking Stick</h1>
+    <div id="instructions">
+        <i id="closeInstr" class="fa fa-times"></i>
+    </div>
+    
+    <div id="instructionsContent">
+        <h1>Welcome to Talking Stick</h1>
 
-
-            <p>Try Talking Stick, an easy way to Moderate Conversation.
-                <br>Just Select your Users, Session Time, and Start.
-                <br>Choose the Mode: Locked, for equal time between Users, 
-                <br>or Unlocked for an unmoderated session.
-                <br>At the end, review your Analytics for Self-Assessment.
-            </p>
-        </div>
+        <p>Try Talking Stick, an easy way to Moderate Conversation.
+            <br>Just Select your Users, Session Time, and Start.
+            <br>Choose the Mode: Locked, for equal time between Users, 
+            <br>or Unlocked for an unmoderated session.
+            <br>At the end, review your Analytics for Self-Assessment.
+        </p>
     </div>
 
     <div class ="wrapper">
+        <div >
+            <form>
+                <div class="inputFields">
+                    <label>Who is talking ?</label>
+                    <input id="nameA" type="text" placeholder="Name of Person A">
+                    <input id="nameB" type="text" placeholder="Name of Person B"><br>
 
-    <div >
-        <form>
-            <div class="inputFields">
-                <label>Who is talking ?</label>
-                <input id="nameA" type="text" placeholder="Name of Person A">
-                <input id="nameB" type="text" placeholder="Name of Person B"><br>
+                    <label for="slider-fill">How Many Minutes:</label>
+                    <input type="range" name="slider-fill" id="slider" value="20" min="4" max="60" data-highlight="false" step="2" />
 
-                <label for="slider-fill">How Many Minutes:</label>
-                <input type="range" name="slider-fill" id="slider" value="20" min="4" max="60" data-highlight="false" step="2" />
-
-                <div class="chooseMode">
-                    Choose Mode:<br>
-                    <input id="locked" name="mode" type="radio" value="Locked" checked><span>Locked</span></p>
-                    <input id="unlocked" name="mode" type="radio" value="Unlocked"><span>Unlocked</span>
-                </div>
-            </div>
-        </form>
-    </div>
-    <div class="startButton">
-<button type="button" onclick="start()">START HERE</button>
-</div>
-
-    </div>
+                    <div class="chooseMode">
+                        Choose Mode:<br>
+                        <input id="locked" name="mode" type="radio" value="Locked" checked><span>Locked</span></p>
+                        <input id="unlocked" name="mode" type="radio" value="Unlocked"><span>Unlocked</span>
+                    </div>
+                </div><!-- end .inputFields -->
+            </form>
+        </div>
+        <div class="startButton">
+            <button type="button" onclick="start()">START HERE</button>
+        </div>
+    </div><!-- end .wrapper -->
 
     <div class="footer">
         <p>Find Us on Github:</p>
             <a class="fa fa-github" href="https://github.com/talkingstick/repo" target="_blank"></a>
         <p>Shadi Kabajah | Beth Zonderman | Michelle Zaffino &copy; 2014</p>
-</div>
+    </div>
 </body>
 </html>

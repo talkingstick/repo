@@ -206,3 +206,11 @@ h1 {font-weight: normal;}
     text-shadow:none;
 }
 
+//coachmarks screen
+#instructionsContent { 
+    background-color: pink;
+    position: fixed; 
+    margin: 50 auto;
+    border: thick solid green;
+}
+#instructionsContent headline1 {font-family: 'Patrick Hand', cursive, 'comic-sans'; color: purple;}
