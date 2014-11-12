@@ -221,7 +221,7 @@ h1 {font-weight: normal;}
     text-shadow:none;
 }
 
-<<<<<<< HEAD
+
 =======
 //coachmarks screen
 #instructionsContent { 
@@ -230,5 +230,4 @@ h1 {font-weight: normal;}
     margin: 50 auto;
     border: thick solid green;
 }
-#instructionsContent headline1 {font-family: 'Patrick Hand', cursive, 'comic-sans'; color: purple;}
->>>>>>> c8abeb2f82847bbc718c26ae6b44e7e8ab6bf63b
+#instructionsContent .headline1 {font-family: 'Patrick Hand', cursive, 'comic-sans'; color: purple;}
