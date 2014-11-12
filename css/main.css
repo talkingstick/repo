@@ -104,12 +104,12 @@ input#slider {
     display: flex;
 }
 .chooseMode span {
-    margin: 3px 40px;
-    display: inline-flex;
+    margin: 60px 100px 0px 0px;
+    display: inline;
     float: left;
 }
 .ui-radio {
-    display: inline-flex;
+    display: inline;
     float: left;
 }
 .footer {
@@ -221,3 +221,14 @@ h1 {font-weight: normal;}
     text-shadow:none;
 }
 
+<<<<<<< HEAD
+=======
+//coachmarks screen
+#instructionsContent { 
+    background-color: pink;
+    position: fixed; 
+    margin: 50 auto;
+    border: thick solid green;
+}
+#instructionsContent headline1 {font-family: 'Patrick Hand', cursive, 'comic-sans'; color: purple;}
+>>>>>>> c8abeb2f82847bbc718c26ae6b44e7e8ab6bf63b

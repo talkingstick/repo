@@ -3,16 +3,19 @@
 <html lang="en">
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, user-scalable=no" name="viewport">
+    <link href="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" rel="stylesheet">
+    <link href="css/font.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, user-scalable=no" />
+
 
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Patrick+Hand">
-
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
-
     <script src="js/index.js" type="text/javascript"></script>
     <script src="js/jQ.js" type="text/javascript"></script>
 
@@ -20,7 +23,6 @@
 </head>
 
 <body onload="checkVisit()">
-
     <div class="header">
         <a class="fa fa-home" href="#"></a>
         <h1>Talking Stick</h1>
@@ -45,33 +47,37 @@
         </div>
     </div>
 
-    <div class ="wrapper">
-        <div >
+    <div class="wrapper">
+        <div>
             <form>
                 <div class="inputFields">
-                    <label>Who is talking ?</label>
-                    <input id="nameA" type="text" placeholder="Name of Person A">
-                    <input id="nameB" type="text" placeholder="Name of Person B"><br>
-
+                    <label>Who is talking ?</label> <input id="nameA"
+                    placeholder="Name of Person A" type="text"> <input id=
+                    "nameB" placeholder="Name of Person B" type="text"><br>
                     <label for="slider-fill">How Many Minutes:</label>
-                    <input type="range" name="slider-fill" id="slider" value="20" min="4" max="60" data-highlight="false" step="2" />
+                    <input data-highlight="false" id="slider" max="60" min="4"
+                    name="slider-fill" step="2" type="range" value="20">
 
                     <div class="chooseMode">
                         Choose Mode:<br>
-                        <input id="locked" name="mode" type="radio" value="Locked" checked><span>Locked</span></p>
-                        <input id="unlocked" name="mode" type="radio" value="Unlocked"><span>Unlocked</span>
+                        <input checked id="locked" name="mode" type="radio"
+                        value="Locked">
+                        <label for="locked">Locked</label> 
+                        <input id="unlocked" name="mode" type="radio" value="Unlocked"><label for="unlocked">Unlocked</label>
                     </div>
-                </div><!-- end .inputFields -->
+                </div>
             </form>
         </div>
+
         <div class="startButton">
-            <button type="button" onclick="start()">START HERE</button>
+            <button onclick="start()" type="button">START HERE</button>
         </div>
-    </div><!-- end .wrapper -->
+    </div>
 
     <div class="footer">
-        <p>Find Us on Github:</p>
-            <a class="fa fa-github" href="https://github.com/talkingstick/repo" target="_blank"></a>
+        <p>Find Us on Github:</p><a class="fa fa-github" href=
+        "https://github.com/talkingstick/repo" target="_blank"></a>
+
         <p>Shadi Kabajah | Beth Zonderman | Michelle Zaffino &copy; 2014</p>
     </div>
 </body>
