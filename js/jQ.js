@@ -39,8 +39,16 @@ $(document).ready(function () {
 
     $("#instructions").click(function () {
         $('#instructions').css("display","none");
+        $('#instructionsContent').css("display","none");
         localStorage.visit = "old";
     });
+    $("#instructionsContent").click(function () {
+        $('#instructions').css("display","none");
+        $('#instructionsContent').css("display","none");
+        localStorage.visit = "old";
+    });
+
+
     $( ".fa-refresh" ).click(function() {
          location.reload();
     });
