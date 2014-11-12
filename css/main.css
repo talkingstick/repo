@@ -154,13 +154,6 @@ a.fa.fa-github {
     background-color: white;
     margin: 0px -9px;
 }
-.timeBox .bz{
-    width: 100%; 
-    text-align: center; 
-    padding: 10px; 
-    background-color: #003842; 
-    color: white;
-}
 
 button {
     border:none;
@@ -199,6 +192,8 @@ button:active {
 }
 h2 {
     text-align: center;
+    font-size: 1.25em;
+    margin: 0 auto 10px auto;
 }
 button.fa.fa-refresh {
     top: 5px;

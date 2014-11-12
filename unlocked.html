@@ -19,27 +19,45 @@
     <div class="header">
         <a class="fa fa-home" href="index.html" rel="external"></a><h1>Talking Stick</h1>
     </div>
-    <div class ="wrapper">
+
+    <div class ="wrapper ">
 			
-			<p class="bz">Session Time Limit: <span id="sessionTime"></span> minutes</p>
-			<div class="timeBox bz" id="timeBox">00:00:00</div>
-			<p class="bz">Time Remaining: <span id="timeRemaining">X</span></p>
-		</header>
-		
+		<h2>Session Time Limit: <span id="sessionTime"></span> minutes</h2>
+		<div class="timeBox" id="timeBox">00:00:00</div>
+		<h2>Time Remaining: <span id="timeRemaining">X</span> minutes</h2>
+			
 		<div class="container">
-			<div class="speaker a sideA" id="speakerA">
-				<button id="startA" class="start">Start A</button>
-			</div>
-			<div class="speaker b sideB" id="speakerB">
-				<button id="startB" class="start">Start B</button>
-			</div>
+
+	        <div class="side ">
+	            <div class="innerSide sideA speaker a">
+	                <h3 id="nameA">A</h3>
+	                <div class="buttonBox">
+	                    <button id="startA" class="start"><i class="fa fa-play"></i></button>
+	                </div>
+	            </div><!-- end .innerSide .sideA -->
+	        </div><!-- end .side -->
+
+
+			<div class="side">
+	            <div class="innerSide sideB speaker b" id="speakerB">
+	                <h3 id="nameB">B</h3>
+	                <div class="buttonBox">
+	                    <button id="startB" class="start"><i class="fa fa-play"></i></button>
+	                </div>
+	            </div><!-- end .innerSide .sideB -->
+	        </div> <!-- end .side -->
+
 		</div><!-- end .container -->
-		<br>
+		
+		<button class="end" id="pause"><i class="fa fa-pause"></i></button>         
+        <button class="end" id="end"><i class="fa fa-stop"></i></button>
+	    
+	</div><!-- end wrapper -->
 
-		<div class="button"><button id="pause">Pause</button></div>
-		<div class="button"><button id="end">End Session</button></div>
 
-</div>
+
+
+
 
     </body>
 
