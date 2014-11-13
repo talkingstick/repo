@@ -63,7 +63,6 @@ function increment() { //every 60 seconds, reset seconds and increment minutes
 
         // update session timeRemaining
         tR = session - m;
-        console.log("tR within the increment function", tR);
         document.getElementById("timeRemaining").innerHTML = (tR + " minutes");
 
         if (tR === 0) {
@@ -86,7 +85,6 @@ function intervalA(){
                 sA = 0;
                 mA++;
             }
-        timeUsedA();
     }
 }
 function intervalB(){
@@ -96,7 +94,6 @@ function intervalB(){
                 sB = 0;
                 mB++;
             }
-        timeUsedB();
     }
 }
 
@@ -126,7 +123,6 @@ $(document).ready(function () {
     
     $("#startA").click(function () {
         startA();
-        timeUsedA();
     });
     $("#startB").click(function () {
         startB();
