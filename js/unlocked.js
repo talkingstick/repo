@@ -14,9 +14,9 @@ var tR = session; //at start, time Remaining = session time
 var pause = 1;
 var pauseA = 1;
 var pauseB = 1; 
-var interval = setInterval(increment, 10);
-var intA = setInterval(intervalA, 10);
-var intB = setInterval(intervalB, 10);
+var interval = setInterval(increment, 1000);
+var intA = setInterval(intervalA, 1000);
+var intB = setInterval(intervalB, 1000);
 
 // Display session time limit
 function sessionTimeLimit() {
