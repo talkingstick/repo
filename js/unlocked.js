@@ -63,7 +63,7 @@ function increment() { //every 60 seconds, reset seconds and increment minutes
 
         // update session timeRemaining
         tR = session - m;
-        document.getElementById("timeRemaining").innerHTML = (tR + " minutes");
+        document.getElementById("timeRemaining").innerHTML = (tR);
 
         if (tR === 0) {
             end();
