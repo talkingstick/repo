@@ -31,54 +31,47 @@ a {
     height: 100%;
     position: fixed;
     top: 0;
-    opacity: .9;
+    padding: 0;
+    margin: 0;
+    opacity: .8;
     visibility: visible;
     z-index: 10;
 }
-
-#instructionsContent { 
-    position: absolute;
-    z-index: 999;
-    visibility: visible;
-    width: 100%;
-    font-family: 'Patrick Hand', cursive, 'comic-sans'; color: white;
-    font-size: 20px; 
-}
-#instructionsContent div {
-    margin: auto; 
-    width: 80%;
-}
-#instructionsContent div p.headline1 { 
-    font-size: 2em; 
-    text-align: center;
-}
-
 i.fa.fa-times {
     float: right;
-    margin: 10px;
-    font-size: 2.5em;
+    margin: 1em;
+    font-size: 2em;
     color: #fff;
 }
-#instructions div{
-    margin: 30px auto;
-    width: 75%;
-    padding: 20px;
-    background-color: white;
-    color: black;
-    opacity: 1.0;
-    opacity: 1;
+#instructionsContent { 
+    position: relative;
+    z-index: 20;
+    visibility: visible;
+    width: 100%;
+    margin: 1em auto;
+    font-family: 'Patrick Hand', cursive, 'comic-sans','Rancho'; 
+    color: white;
+    text-align: left;
 }
-#instructions p{
-    font-weight: normal;
-    font-size: 1.5em;
-    line-height: 140%;
+#instructionsContentWrapper {
+    width: 90%;
+    font-size: 1.3em;
+    margin: 0 auto; 
+    padding: 0;
+    background-color: transparent;
 }
-#instructions h1 {
-    text-align: center; 
-    color: black; 
-    font-weight: bold;
+.headline1 { 
+    font-size: 2em;
+    margin: 1em 0 0 0;
+    padding: 0;
 }
 
+#instructionsContent ul {
+    text-align: left;
+    margin: 0 auto;
+}
+#instructionsContent li {
+}
 input#slider {
     width: 98%;
 }
@@ -143,9 +136,7 @@ a.fa.fa-github {
     float: left;
     width: 50%;
     text-align: center;
-    border-radius: 5px;
-
-    
+    border-radius: 5px;    
 }
 .innerSide {
     height: 215px;
@@ -154,7 +145,6 @@ a.fa.fa-github {
     background-color: #EEE;
     border-radius: 5px;
 }
- 
 .timeBox {
     border: solid 1px #ccc;
     padding: .3em;
@@ -164,8 +154,7 @@ a.fa.fa-github {
     font-family: 'Concert One', cursive;
     font-size: 2em;
 }
-
-
+ 
 button {
     border:none;
     padding:1em;
@@ -193,11 +182,9 @@ button:active {
     border: solid 1px #CCC;
     margin: 5px 0px;
 }
-
-.sideA, .sideB  {
+.sideA, .sideB {
     transition-duration: 1.5s; 
 }
-
  #startA, #startB {
     transition-duration: .5s; 
 }
@@ -217,7 +204,6 @@ button.fa.fa-refresh {
     text-shadow:0 0 0 transparent;
     text-shadow:none;
 }
- 
 
 // Styles for Unlocked Screen
 .container {background-color: #DDCDB8; width: 100%; text-align: center; margin: 5px auto; padding:0;}
@@ -229,4 +215,17 @@ button.fa.fa-refresh {
 h1 {font-weight: normal;}
 .endActive { background-color: red;}
 
+ 
+@media (min-width: 600px) {
+    #instructionsContentWrapper {
+        width: 60%;
+        font-size: 1.5em;
+    }
+}
+@media (min-width: 1024px) {
+    #instructionsContentWrapper {
+        width: 40%;
+        font-size: 1.7em;
+    }
+}
  
