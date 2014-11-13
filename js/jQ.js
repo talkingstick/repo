@@ -2,28 +2,28 @@ $(document).ready(function () {
     
     $("#startA").click(function () {
         startA();
-        $('.sideA').css("background-color","green");
+        $('.sideA').css("background-color","#399464");
         $('#startA').css("visibility","hidden");
-        $('.sideB').css("background-color","Crimson");
+        $('.sideB').css("background-color","#D7EAE0");
         $('#startB').css("visibility","visible");
         $('#pause').css("background-color","#EEE");
     });
 
     $("#startB").click(function () {
         startB();
-        $('.sideB').css("background-color","green");
+        $('.sideB').css("background-color","#399464");
         $('#startB').css("visibility","hidden");
-        $('.sideA').css("background-color","Crimson");
+        $('.sideA').css("background-color","#D7EAE0");
         $('#startA').css("visibility","visible");
         $('#pause').css("background-color","#EEE");
     });
 
     $("#pause").click(function () {
         pause();
-        $('.sideB').css("background-color","#FCC");
+        $('.sideB').css("background-color","#E8B2B2");
         $('#startB').css("visibility","visible");
-        $('.sideA').css("background-color","#FCC");
-        $('#pause').css("background-color","red");
+        $('.sideA').css("background-color","#E8B2B2");
+        $('#pause').css("background-color","#B20000");
         $('#startA').css("visibility","visible");
     });
 
