@@ -14,6 +14,7 @@ body {
     width: 100%;
     top: 0;
     height: 60px;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 a.fa.fa-home {       
     float: left;
@@ -162,6 +163,10 @@ a.fa.fa-github {
     background-color: orange;
 }
  
+p#minRemaining {
+    margin: 0;
+    font-size: .6em;
+}
 button {
     border:none;
     padding:1em;
@@ -219,7 +224,6 @@ button.fa.fa-refresh {
 .b {background-color: #BCD0C4; float: right;}
 .button {width: 100%; background-color: #DDCDB8; margin: 5px 0; text-align: center; clear: both; }
 #runningTimer {width: 100%; text-align: center; padding: 10px; background-color: #003842; color: white;}
-h1 {font-weight: normal;}
 .endActive { background-color: red;}
 
  

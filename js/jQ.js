@@ -18,13 +18,13 @@ $(document).ready(function () {
         $('#pause').css("background-color","#EEE");
     });
 
-    $("#pause").click(function () {
-        pause();
+    $(".fa-pause").click(function () {
         $('.sideB').css("background-color","#E8B2B2");
         $('#startB').css("visibility","visible");
         $('.sideA').css("background-color","#E8B2B2");
         $('#pause').css("background-color","#B20000");
         $('#startA').css("visibility","visible");
+        pause();
     });
 
     $("#end").click(function () {
