@@ -83,8 +83,9 @@ input#slider {
     border-radius: 10px;
     margin: 75px 15px 15px 15px;
     height: auto;
-    position: relative;
 }
+.relative {position: relative;}
+
 .startButton {
     margin: 5px ;
 }
@@ -157,11 +158,6 @@ a.fa.fa-github {
     font-size: 2em;
 }
 
-.timeBox .unlocked{
-    position: absolute;
-    top: 50px;
-    background-color: orange;
-}
  
 p#minRemaining {
     margin: 0;
