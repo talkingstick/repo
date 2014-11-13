@@ -32,6 +32,7 @@ function uPause() {
     pauseA = 1;
     pauseB = 1;
     pause = 1;
+
 }
 
 function end() {
@@ -120,7 +121,9 @@ $(document).ready(function () {
     if (tR === 0) {
         end();
     }
-
+    document.getElementById('nameA').innerHTML = localStorage.nameA;
+    document.getElementById('nameB').innerHTML = localStorage.nameB;
+    
     $("#startA").click(function () {
         startA();
         timeUsedA();
