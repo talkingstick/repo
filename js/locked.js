@@ -88,7 +88,7 @@ function end() {
 }
 
 function counterValueA() {
-    document.getElementById("timeBoxA").innerHTML = (mA + ": " + sA + "<br>Minutes Left");
+    document.getElementById("timeBoxA").innerHTML = (mA + ": " + sA + "<br>Minutes remaining");
     if (mA<=0&&sA<=0) {
         pauseA=1;
         document.getElementById("timeBoxA").innerHTML = ("Time's Up!");
@@ -96,7 +96,7 @@ function counterValueA() {
 }
 
 function counterValueB() {
-    document.getElementById("timeBoxB").innerHTML = (mB + ": " + sB +"<br>Minutes Left");
+    document.getElementById("timeBoxB").innerHTML = (mB + ": " + sB +"<br>Minutes remaining");
     if (mB<=0&&sB<=0) {
         pauseB=1;
         document.getElementById("timeBoxB").innerHTML = ("Time's Up!");

@@ -5,7 +5,7 @@ body {
     padding: 0;
     background-color: #EEE;
     font-size: 90%;
-    font-family: "Calibri", arial;
+    font-family: 'Arimo', sans-serif;
 }
 .header {
     position: fixed;
@@ -152,15 +152,19 @@ a.fa.fa-github {
     padding: 5px;
     margin: 8px;
     background-color: #EEE;
+    border-radius: 5px;
 }
  
 .timeBox {
     border: solid 1px #ccc;
-    padding: 1em;
+    padding: .3em;
     text-align: center;
     background-color: white;
     margin: 0px -9px;
+    font-family: 'Concert One', cursive;
+    font-size: 2em;
 }
+
 
 button {
     border:none;
