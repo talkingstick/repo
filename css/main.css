@@ -222,7 +222,7 @@ button.fa.fa-refresh {
 h1 {font-weight: normal;}
 .endActive { background-color: red;}
 
-<<<<<<< HEAD
+ 
 @media (min-width: 600px) {
     #instructionsContentWrapper {
         width: 60%;
@@ -235,6 +235,4 @@ h1 {font-weight: normal;}
         font-size: 1.7em;
     }
 }
-=======
  
->>>>>>> origin/master
