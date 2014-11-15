@@ -1,7 +1,5 @@
 $(document).ready(function () {
 
-
-
     $("#startA").click(function () {
         startA();
             $('.sideA').css("background-color","#399464");

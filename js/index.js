@@ -1,5 +1,4 @@
 function checkVisit () {
-    localStorage.clear;
 	console.log(localStorage.visit);
 	if (localStorage.visit == "undefined") {
 		document.getElementById("instructions").style.visibility="visible";
