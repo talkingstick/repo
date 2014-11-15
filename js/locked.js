@@ -12,7 +12,7 @@ var hB = 0;
 var pauseA = 1;
 var pauseB = 1;
 
-var intervalA = setInterval(decrementA, 1000); //10 for testing use 1000 for real time
+var intervalA = setInterval(decrementA, 100); //10 for testing use 1000 for real time
 var intervalB = setInterval(decrementB, 1000); //10 for testing use 1000 for real time
 
 function decrementA() {
@@ -91,16 +91,22 @@ function end() {
 
 function counterValueA() {
     document.getElementById("timeBoxA").innerHTML = (mA + ": " + sA + "<p id='minRemaining'>minutes remaining</p>");
+    localStorage.timeUpA=0;
+
     if (mA<=0&&sA<=0) {
         pauseA=1;
         document.getElementById("timeBoxA").innerHTML = ("Time's Up!");
+        localStorage.timeUpA=1;
     }
 }
 
 function counterValueB() {
     document.getElementById("timeBoxB").innerHTML = (mB + ": " + sB +"<p id='minRemaining'>minutes remaining</p>");
+    localStorage.timeUpB=0;
+
     if (mB<=0&&sB<=0) {
         pauseB=1;
         document.getElementById("timeBoxB").innerHTML = ("Time's Up!");
+        localStorage.timeUpB=1;
     }
 }
