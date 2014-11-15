@@ -81,8 +81,10 @@ function end() {
     localStorage.uA=0;
     localStorage.uB=0;
     localStorage.mode="locked";
-    localStorage.lA=mA;
-    localStorage.lB=mB;
+    localStorage.mA=mA;
+    localStorage.mB=mB;
+    localStorage.sA=sA;
+    localStorage.sB=mB;
     
     window.location.replace("analytics.html");
 }

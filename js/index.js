@@ -9,8 +9,18 @@ function checkVisit () {
 }
 function start () {
     localStorage.numberOfUsers = 2;
-    localStorage.nameA = document.getElementById("nameA").value;
-    localStorage.nameB = document.getElementById("nameB").value;
+    if (document.getElementById("nameA").value == "") {
+        localStorage.nameA = "Veronika";
+    } else {
+        localStorage.nameA = document.getElementById("nameA").value;
+    }
+
+    if (document.getElementById("nameB").value == "") {
+        localStorage.nameB = "Mathew";
+    } else {
+        localStorage.nameB = document.getElementById("nameB").value;
+    }
+
     localStorage.Session = document.getElementById("slider").value;
     console.log(localStorage);
 
