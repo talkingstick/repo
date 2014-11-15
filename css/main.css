@@ -15,6 +15,7 @@ body {
     top: 0;
     height: 60px;
     font-family: 'Open Sans Condensed', sans-serif;
+    z-index: 100;
 }
 a.fa.fa-home {       
     float: left;
