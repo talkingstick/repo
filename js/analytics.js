@@ -3,8 +3,10 @@ var mode = localStorage.mode;
 
 console.log(session);
 if (mode =="locked")  {
-    var mAspoken = (session/2) - parseInt(localStorage.lA);
-    var mBspoken = (session/2) - parseInt(localStorage.lB);
+    var mAspoken = (session/2) - parseInt(localStorage.mA);
+    var mBspoken = (session/2) - parseInt(localStorage.mB);
+    var sAspoken = 60 - parseInt(localStorage.sA);
+    var sBspoken = 60-  parseInt(localStorage.sB);
     console.log(mAspoken,mBspoken);
     var mA = Math.round(mAspoken/(mAspoken+mBspoken)*100);
     var mB = Math.round(mBspoken/(mAspoken+mBspoken)*100);
@@ -18,7 +20,8 @@ if (mode =="locked")  {
 } 
 
  function result () {
-    document.getElementById("result").innerHTML = (localStorage.nameA + " spoke for: " +   mAspoken + "mins <br>& " + localStorage.nameB + " spoke for: " +   mBspoken + "mins");
+    document.getElementById("result").innerHTML = (localStorage.nameA + " spoke for: " +   mAspoken + ":"+ sAspoken+ "mins <br>& " 
+      + localStorage.nameB + " spoke for: " +   mBspoken + "mins");
 }
 
 

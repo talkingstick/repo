@@ -18,7 +18,7 @@ $(document).ready(function () {
         $('#pause').css("background-color","#EEE");
     });
 
-    $(".fa-pause").click(function () {
+    $("#pause").click(function () {
         $('.sideB').css("background-color","#E8B2B2");
         $('#startB').css("visibility","visible");
         $('.sideA').css("background-color","#E8B2B2");
