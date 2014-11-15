@@ -61,20 +61,28 @@ i.fa.fa-times {
     padding: 0;
     background-color: transparent;
 }
+
+#instructionsContent p {
+    margin: 0;
+}
 .headline1 { 
     font-size: 2em;
     margin: 1em 0 0 0;
     padding: 0;
+    text-align: center;
 }
-
+@media (min-width: 600px) {
+    .headline1 {
+        font-size: 1.25em;
+    }
+.headline2 {
+    margin: 0 auto .5em auto; 
+    text-align: center; 
+    font-style: italic;
+}
 #instructionsContent ul {
     text-align: left;
     margin: 0 auto;
-}
-#instructionsContent li {
-}
-input#slider {
-    width: 98%;
 }
 .wrapper {
     border: solid 1px #CCC;
