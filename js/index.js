@@ -10,13 +10,13 @@ function checkVisit () {
 function start () {
     localStorage.numberOfUsers = 2;
     if (document.getElementById("nameA").value == "") {
-        localStorage.nameA = "Veronika";
+        localStorage.nameA = "Beth";
     } else {
         localStorage.nameA = document.getElementById("nameA").value;
     }
 
     if (document.getElementById("nameB").value == "") {
-        localStorage.nameB = "Mathew";
+        localStorage.nameB = "Shadi";
     } else {
         localStorage.nameB = document.getElementById("nameB").value;
     }

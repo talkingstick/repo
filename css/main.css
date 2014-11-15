@@ -15,7 +15,11 @@ body {
     top: 0;
     height: 60px;
     font-family: 'Open Sans Condensed', sans-serif;
+<<<<<<< HEAD
     z-index: 9;
+=======
+    z-index: 999;
+>>>>>>> origin/master
 }
 a.fa.fa-home {       
     float: left;
@@ -243,4 +247,3 @@ button.fa.fa-refresh {
         font-size: 1.7em;
     }
 }
- 
