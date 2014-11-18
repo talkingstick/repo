@@ -42,8 +42,11 @@ function end() {
     localStorage.lA = 0;
     localStorage.lB = 0;
     localStorage.mode = "unlocked";
-    localStorage.uA = mA; //pass this to analytics
-    localStorage.uB = mB; //pass this to analytics
+    localStorage.mA = mA; //pass this to analytics
+    localStorage.mB = mB; //pass this to analytics
+    localStorage.sA = sA; //pass this to analytics
+    localStorage.sB = sB; //pass this to analytics
+    
     document.getElementById("end").innerHTML = ("<a href='analytics.html' rel='external'>Time is up. View analytics.</a>");
 
     var e;

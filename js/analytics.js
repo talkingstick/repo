@@ -2,12 +2,13 @@ var session = parseInt(localStorage.Session);
 var mode = localStorage.mode;
 var sessionEach = (session/2)*60;
 
-if (mode =="locked")  {
-  var mA = parseInt(localStorage.mA);
-  var mB = parseInt(localStorage.mB);
-  var sA = parseInt(localStorage.sA);
-  var sB = parseInt(localStorage.sB);
+var mA = parseInt(localStorage.mA);
+var mB = parseInt(localStorage.mB);
+var sA = parseInt(localStorage.sA);
+var sB = parseInt(localStorage.sB);
 
+if (mode =="locked")  {
+  
   var counterA = (sessionEach) -(mA*60+sA);
   var counterB = (sessionEach) -(mB*60+sB);
   
@@ -20,15 +21,23 @@ if (mode =="locked")  {
   var sAspoken = 60 - sA;
   var sBspoken = 60 - sB;
 
+  if (sAspoken ==60) {sAspoken = 0 ; mAspoken++;}
+  if (sBspoken ==60) {sBspoken = 0 ; mBspoken++;}
+
 } else if (mode == "unlocked") {
-    var mAspoken = parseInt(localStorage.uA);
-    var mBspoken = parseInt(localStorage.uB);
-    console.log(mAspoken,mBspoken);
-    var percentA = Math.round(mAspoken/(mAspoken+mBspoken)*100);
-    var percentB = Math.round(mBspoken/(mAspoken+mBspoken)*100);
+    var mAspoken = mA;
+    var mBspoken = mB;
+    var sAspoken = sA;
+    var sBspoken = sB;
+
+    var counterA = (mA*60)+sA;
+    var counterB = (mB*60)+sB;
 } 
 
  function result () {
+  var percentA = Math.round(counterA/(counterA+counterB)*100);
+  var percentB = Math.round(counterB/(counterA+counterB)*100);
+
   if (sAspoken<10) {
     sAspoken = "0"+sAspoken;
   }
