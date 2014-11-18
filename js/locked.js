@@ -12,8 +12,8 @@ var hB = 0;
 var pauseA = 1;
 var pauseB = 1;
 
-var intervalA = setInterval(decrementA, 10); //10 for testing use 1000 for real time
-var intervalB = setInterval(decrementB, 10); //10 for testing use 1000 for real time
+var intervalA = setInterval(decrementA, 1000); //10 for testing use 1000 for real time
+var intervalB = setInterval(decrementB, 1000); //10 for testing use 1000 for real time
 
 function decrementA() {
     if (pauseA == 0) {
@@ -109,7 +109,6 @@ function counterValueB() {
         pauseB=1;
         localStorage.timeUpB=1;
         document.getElementById("timeBoxB").innerHTML = ("Time's Up!");
-        localStorage.timeUpB=1;
         $.fn.timeUp(".sideB");
         $.fn.ding();
     }
