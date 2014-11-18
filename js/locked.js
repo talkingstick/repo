@@ -56,7 +56,7 @@ function startA() {
 }
 
 function startB() {
-    if (mB<=0&&sB<=0) {
+    if (mB==0&&sB==0) {
         pauseB = 1;
     } else {
         pauseA = 1;
@@ -73,21 +73,6 @@ function pause() {
 
     counterValueA();
     counterValueB();
-}
-
-function end() {
-    pauseA = 1;
-    pauseB = 1;
-    
-    localStorage.uA=0;
-    localStorage.uB=0;
-    localStorage.mode="locked";
-    localStorage.mA=mA;
-    localStorage.mB=mB;
-    localStorage.sA=sA;
-    localStorage.sB=mB;
-    
-    window.location.replace("analytics.html");
 }
 
 function counterValueA() {
@@ -112,5 +97,19 @@ function counterValueB() {
         $.fn.timeUp(".sideB");
         $.fn.ding();
     }
+}
+
+
+function end() {
+    localStorage.mode="locked";
+    localStorage.mA=mA;
+    localStorage.mB=mB;
+    localStorage.sA=sA;
+    localStorage.sB=mB;
+    
+    pauseA = 1;
+    pauseB = 1;
+    
+    window.location.replace("analytics.html");
 }
  

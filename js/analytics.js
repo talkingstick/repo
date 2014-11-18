@@ -1,16 +1,28 @@
 var session = parseInt(localStorage.Session);
-var mode = localStorage.mode;
+var sB = parseInt(localStorage.sB);
+var session = parseInt(localStorage.Session);
 
-console.log(session);
+
+var mode = localStorage.mode;
+var sessionEach = (session/2)*60;
+
 if (mode =="locked")  {
-    var mAspoken = (session/2) - parseInt(localStorage.mA);
-    var mBspoken = (session/2) - parseInt(localStorage.mB);
-    var sAspoken = 60 - parseInt(localStorage.sA);
-    var sBspoken = 60-  parseInt(localStorage.sB);
-    console.log(mAspoken,mBspoken);
-    var mA = Math.round(mAspoken/(mAspoken+mBspoken)*100);
-    var mB = Math.round(mBspoken/(mAspoken+mBspoken)*100);
-    console.log(mA,mB);
+
+  var minutesA = Math.round(parseInt(localStorage.Session)/60) - (parseInt(localStorage.mA));
+  var minutesB = Math.round(parseInt(localStorage.Session)/60) - (parseInt(localStorage.mB));
+  
+  var secondsA = 60 - parseInt(localStorage.sA);
+  var secondsB = 60 - parseInt(localStorage.sB);
+
+  var counterA = (parseInt(localStorage.mA)*60) + parseInt(localStorage.sA);
+  var counterB = (parseInt(localStorage.mB)*60) + parseInt(localStorage.sB);
+
+  var Aspoken = sessionEach - counterA;
+  var Bspoken = sessionEach - counterB;
+
+  var percentA = Math.round(Aspoken/(Aspoken+Bspoken))*100;
+  var percentB = Math.round(Bspoken/(Aspoken+Bspoken))*100;
+
 } else if (mode == "unlocked") {
     var mAspoken = parseInt(localStorage.uA);
     var mBspoken = parseInt(localStorage.uB);
@@ -20,8 +32,8 @@ if (mode =="locked")  {
 } 
 
  function result () {
-    document.getElementById("result").innerHTML = (localStorage.nameA + " spoke for: " +   mAspoken + ":"+ sAspoken+ "mins <br>& " 
-      + localStorage.nameB + " spoke for: " +   mBspoken + "mins");
+    document.getElementById("result").innerHTML = (localStorage.nameA + " spoke for: " +   minutesA + ":"+  secondsA + "mins <br>& " 
+      + localStorage.nameB + " spoke for: " +   minutesB + ":"+  secondsB + "mins");
 }
 
 
@@ -29,8 +41,8 @@ function morris () {
 	Morris.Donut({
         element: 'graph',
         data: [
-          {value: mA, label: localStorage.nameA},
-          {value: mB, label: localStorage.nameB},
+          {value: percentA, label: localStorage.nameA},
+          {value: percentB, label: localStorage.nameB},
              ],
         formatter: function (x) { return x + "%"}
       }).on('click', function(i, row){
