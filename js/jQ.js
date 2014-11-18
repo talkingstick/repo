@@ -31,8 +31,9 @@ $(document).ready(function () {
     $("#pause").click(function () {
         $('.sideA').css("background-color","#E8B2B2");
         $('.sideB').css("background-color","#E8B2B2");
-        $('#startB').css("visibility","visible");
-        $('#startA').css("visibility","visible");
+        if (localStorage.timeUpA==0) {  $('#startA').css("visibility","visible");}
+        if (localStorage.timeUpB==0) {  $('#startB').css("visibility","visible");}
+
         $('#pause').css("background-color","#B20000");
         pause();
     });
@@ -73,7 +74,7 @@ $.fn.timeUp = function(e) {
 $.fn.ding = function() { 
     if (localStorage.timeUpA==1 || localStorage.timeUpB==1) {
         var audioElement = document.createElement('audio');
-        audioElement.setAttribute('src', 'http://www.rangde.org/static/bell-ring-01.mp3');
+        audioElement.setAttribute('src', 'media/ding.mp3');
         audioElement.setAttribute('autoplay', 'autoplay'); 
     }
 }
