@@ -188,8 +188,7 @@ button:active {
     margin: 5px 0px;
 }
 .sideA, .sideB {
-    transition-duration: 1.5s;
-    height: 200px; 
+    transition-duration: 1.5s; 
 }
  #startA, #startB {
     transition-duration: .5s; 
