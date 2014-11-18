@@ -241,3 +241,8 @@ button.fa.fa-refresh {
         font-size: 1.7em;
     }
 }
+
+.logo {
+  float:left;
+  margin: 9px -7px 0px 20px;
+}
