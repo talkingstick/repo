@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+    <link href="css/font.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Concert+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>    <script src="js/locked.js" type="text/javascript"></script>
+    <script src="js/jQ.js" type="text/javascript"></script>
+
+    <title>Locked Mode</title>
+</head>
+
+<body onload="pause();">
+
+// Header icon links to home
+
+    <div class="header">
+        <a class="fa fa-home" href="index.html" rel="external"></a><h1>Talking Stick</h1>
+        <button class="fa fa-refresh"></button>
+    </div>
+
+// User A clicks to start speaking
+
+    <div class ="wrapper">
+        <div class="side ">
+            <div class="innerSide sideA">
+                <h3 id="nameA">A</h3>
+                <div class="buttonBox">
+                    <button id="startA" class="start"><i class="fa fa-play"></i></button>
+                </div>
+
+// Timer for User A with decreasing time counter
+
+                <div class="timeBox" id="timeBoxA">
+                    <span id="hoursA">0</span>: <span id="minutesA">0</span>: <span id=
+                    "secondsA">0</span>
+                </div>
+            </div><!-- end .innerSide .sideA -->
+        </div><!-- end .side -->
+
+// User B clicks to start speaking
+
+        <div class="side">
+            <div class="innerSide sideB">
+                <h3 id="nameB">B</h3>
+                <div class="buttonBox">
+                    <button id="startB" class="start"><i class="fa fa-play"></i></button>
+                </div>
+
+// Timer for User B with decreasing time counter
+
+                <div class="timeBox" id="timeBoxB">
+                    <span id="hoursB">0</span>: <span id="minutesB">0</span>: <span id=
+                    "secondsB">0</span>
+                </div>
+            </div><!-- end .innerSide .sideB -->
+        </div> <!-- end .side -->
+
+// Pause button
+// End button
+
+        <button class="end" id="pause"><i class="fa fa-pause"></i></button>         
+        <button class="end" id="end"><i class="fa fa-stop"></i></button>
+        <div id="timeup"></div>
+
+    </div><!-- end wrapper -->
+</body>
+</html>

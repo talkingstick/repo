@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Concert+One' rel='stylesheet' type='text/css'>
+    <link href="css/font.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/analytics.css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.min.js"></script>
+    <script src="js/morris.js"></script>
+
+    <script src="js/analytics.js"></script>
+    <script src="js/jQ.js" type="text/javascript"></script>
+    
+        <title>Analytics</title>
+</head>
+
+// Loads data into donut chart 
+
+<body onload="morris()">
+
+// Header icon links to home
+
+    <div class="header">
+        <a class="fa fa-home" href="index.html" rel="external"></a><h1>Talking Stick</h1>
+    </div>
+    <div class ="wrapper">
+    
+// Pulling in SVG graphic from Raphael library
+// Pulling in data from D3
+
+    <h2>Result</h2>
+        <div id="graph"></div>
+        <div id="result"></div>
+
+    </div>
+</body>
+</html>
