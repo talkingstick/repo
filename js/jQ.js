@@ -34,7 +34,7 @@ $(document).ready(function () {
         $('.sideA').css("background-color","#EEE");
         $('#startA').css("visibility","visible");
         $('#pause').css("background-color","#EEE");   
-        $('#end').css("background-color","#f60");
+        $('#end').css("background-color","#B20000");
     });
 
     $("#instructions").click(function () {
