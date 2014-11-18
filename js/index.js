@@ -6,6 +6,8 @@ function checkVisit () {
 	} else if (localStorage.visit == "old") {
 		document.getElementById("instructions").style.visibility="visible";
 	}
+    localStorage.timeUpA=0;
+    localStorage.timeUpB=0;
 }
 function start () {
     localStorage.numberOfUsers = 2;

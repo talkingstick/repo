@@ -11,3 +11,6 @@ text-align: center;
 font-weight: bold;
 margin-bottom: 5px;
 }
+path[Attributes Style] {
+fill: red;
+}
