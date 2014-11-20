@@ -32,11 +32,12 @@ if (mode =="locked")  {
 
     var counterA = (mA*60)+sA;
     var counterB = (mB*60)+sB;
+    
+    var percentA = Math.round(counterA/(counterA+counterB)*100);
+    var percentB = Math.round(counterB/(counterA+counterB)*100);
 } 
 
 function result () {
-  var percentA = Math.round(counterA/(counterA+counterB)*100);
-  var percentB = Math.round(counterB/(counterA+counterB)*100);
 
   if (sAspoken<10) {
     sAspoken = "0"+sAspoken;
@@ -48,15 +49,14 @@ function result () {
     document.getElementById("result").innerHTML = (localStorage.nameA + " spoke for: " +   mAspoken + ":"+  sAspoken + " minutes <br>" 
       + localStorage.nameB + " spoke for: " +   mBspoken + ":"+  sBspoken + " minutes");
 }
-
-
-
-function morris () {
-  if (sA && sB < 60){
+/*
+if (sA && sB < 60){// fix this for 1:10
   result();  
   document.getElementById("graph").innerHTML = ("<p>We provide analytics for conversations longer than one minute. <br>Please speak longer if you would like to see a graph.</p>"); 
-  }
-  else {
+*/
+
+function morris () {  
+  
   Morris.Donut({
         element: 'graph',
         data: [
@@ -68,5 +68,5 @@ function morris () {
         console.log(i, row);
       });
       result();
-  }
+  
 }
