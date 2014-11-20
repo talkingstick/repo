@@ -85,7 +85,7 @@ function end() {
     localStorage.mA=mA;
     localStorage.mB=mB;
     localStorage.sA=sA;
-    localStorage.sB=mB;
+    localStorage.mB=mB;
     
     window.location.replace("analytics.html");
 }
