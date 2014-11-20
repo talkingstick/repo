@@ -11,7 +11,10 @@ text-align: center;
 font-weight: bold;
 margin-bottom: 5px;
 }
-
+#graph p{
+	text-align: center;
+	font-size: 140%;
+}
 .morris-hover{
 	position:absolute;
 	z-index:1000
@@ -34,3 +37,4 @@ margin-bottom: 5px;
 	white-space:nowrap;
 	margin:0.1em 0;
 }
+
