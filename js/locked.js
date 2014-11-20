@@ -3,11 +3,10 @@ var numberOfUsers  = 2;
 
 var sA = 0;
 var mA = Math.round(session/numberOfUsers);
-var hA = 0;
 
 var sB = 0;
 var mB = Math.round(session/numberOfUsers);
-var hB = 0;
+
 
 var pauseA = 1;
 var pauseB = 1;
@@ -15,17 +14,16 @@ var pauseB = 1;
 var intervalA = setInterval(decrementA, 1000); //10 for testing use 1000 for real time
 var intervalB = setInterval(decrementB, 1000); //10 for testing use 1000 for real time
 
+var x = 0;
+var y = 0;
+
+
 function decrementA() {
     if (pauseA == 0) {
         sA = sA % 360 - 1;
         if (sA == -1) {
             sA = 59;
             mA--;
-        }
-        if (mA == -1) {
-            mA = 59;
-            hA--;
-
         }
         counterValueA();
     }
@@ -37,10 +35,6 @@ function decrementB() {
         if (sB == -1) {
             sB = 59;
             mB--;
-        }
-        if (mB == -1) {
-            mB = 59;
-            hB--;
         }
         counterValueB();
     }
@@ -56,7 +50,7 @@ function startA() {
 }
 
 function startB() {
-    if (mB<=0&&sB<=0) {
+    if (mB==0&&sB==0) {
         pauseB = 1;
     } else {
         pauseA = 1;
@@ -75,42 +69,46 @@ function pause() {
     counterValueB();
 }
 
-function end() {
-    pauseA = 1;
-    pauseB = 1;
-    
-    localStorage.uA=0;
-    localStorage.uB=0;
-    localStorage.mode="locked";
-    localStorage.mA=mA;
-    localStorage.mB=mB;
-    localStorage.sA=sA;
-    localStorage.mB=mB;
-    
-    window.location.replace("analytics.html");
-}
-
 function counterValueA() {
     document.getElementById("timeBoxA").innerHTML = (mA + ": " + sA + "<p id='minRemaining'>minutes remaining</p>");
 
-    if (mA<=0&&sA<=0) {
+    if (mA==0&&sA==0) {
         pauseA=1;
         localStorage.timeUpA=1;
         document.getElementById("timeBoxA").innerHTML = ("Time's Up!");
         $.fn.timeUp(".sideA");
-        $.fn.ding();
+        if (x==0){
+            $.fn.ding();
+            x++;
+        }
     }
 }
 
 function counterValueB() {
     document.getElementById("timeBoxB").innerHTML = (mB + ": " + sB +"<p id='minRemaining'>minutes remaining</p>");
 
-    if (mB<=0&&sB<=0) {
+    if (mB==0&&sB==0) {
         pauseB=1;
         localStorage.timeUpB=1;
         document.getElementById("timeBoxB").innerHTML = ("Time's Up!");
         $.fn.timeUp(".sideB");
-        $.fn.ding();
+        if (y==0){
+            $.fn.ding();
+            y++;
+        }
     }
 }
- 
+
+
+function end() {
+    localStorage.mode="locked";
+    localStorage.mA=mA;
+    localStorage.mB=mB;
+    localStorage.sA=sA;
+    localStorage.sB=sB;
+    
+    pauseA = 1;
+    pauseB = 1;
+    
+    window.location.replace("analytics.html");
+}

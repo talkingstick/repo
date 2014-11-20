@@ -1,45 +1,61 @@
 var session = parseInt(localStorage.Session);
 var mode = localStorage.mode;
+var sessionEach = (session/2)*60;
 
-console.log(session);
+var mA = parseInt(localStorage.mA);
+var mB = parseInt(localStorage.mB);
+var sA = parseInt(localStorage.sA);
+var sB = parseInt(localStorage.sB);
+
 if (mode =="locked")  {
-    var mAspoken = (session/2) - parseInt(localStorage.mA);
-    var mBspoken = (session/2) - parseInt(localStorage.mB);
-    var sAspoken = 60 - parseInt(localStorage.sA);
-    var sBspoken = 60-  parseInt(localStorage.sB);
+  
+  var counterA = (sessionEach) -(mA*60+sA);
+  var counterB = (sessionEach) -(mB*60+sB);
+  
+  var percentA = Math.round(counterA/(counterA+counterB)*100);
+  var percentB = Math.round(counterB/(counterA+counterB)*100);
 
-    var mA = Math.round(mAspoken/(mAspoken+mBspoken)*100);
-    var mB = Math.round(mBspoken/(mAspoken+mBspoken)*100);
-    
+  var mAspoken = session/2-mA-1;
+  var mBspoken = session/2-mB-1;
+  
+  var sAspoken = 60 - sA;
+  var sBspoken = 60 - sB;
+
+  if (sAspoken ==60) {sAspoken = 0 ; mAspoken++;}
+  if (sBspoken ==60) {sBspoken = 0 ; mBspoken++;}
+
 } else if (mode == "unlocked") {
-    var mAspoken = parseInt(localStorage.uA);
-    var mBspoken = parseInt(localStorage.uB);
-    console.log(mAspoken,mBspoken);
-    var mA = Math.round(mAspoken/(mAspoken+mBspoken)*100);
-    var mB = Math.round(mBspoken/(mAspoken+mBspoken)*100);
+    var mAspoken = mA;
+    var mBspoken = mB;
+    var sAspoken = sA;
+    var sBspoken = sB;
 
+    var counterA = (mA*60)+sA;
+    var counterB = (mB*60)+sB;
 } 
 
-function result () {
-    document.getElementById("result").innerHTML = (localStorage.nameA + " spoke for: " +   mAspoken + ":"+ sAspoken+ " minutes <br> " 
-      + localStorage.nameB + " spoke for: " +   mBspoken + " minutes");
+ function result () {
+  var percentA = Math.round(counterA/(counterA+counterB)*100);
+  var percentB = Math.round(counterB/(counterA+counterB)*100);
+
+  if (sAspoken<10) {
+    sAspoken = "0"+sAspoken;
+  }
+  if (sBspoken<10) {
+    sBspoken = "0"+sBspoken;
+  }
+
+    document.getElementById("result").innerHTML = (localStorage.nameA + " spoke for: " +   mAspoken + ":"+  sAspoken + " minutes, <br>" 
+      + localStorage.nameB + " spoke for: " +   mBspoken + ":"+  sBspoken + " minutes.");
 }
 
 
-
-// If neither user spoke for >1 minutes, display a placeholder error
-function resultTalkMore () {
-  if (mB && mA < 1){
-    document.getElementById("result").innerHTML = "Analytics are available for sessions longer than one minute."
-  }
-} 
-
 function morris () {
-	Morris.Donut({
+  Morris.Donut({
         element: 'graph',
         data: [
-          {value: mA, label: localStorage.nameA},
-          {value: mB, label: localStorage.nameB},
+          {value: percentA, label: localStorage.nameA},
+          {value: percentB, label: localStorage.nameB},
              ],
         formatter: function (x) { return x + "%"}
       }).on('click', function(i, row){

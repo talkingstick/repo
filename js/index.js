@@ -1,10 +1,12 @@
 function checkVisit () {
 	console.log(localStorage.visit);
 	if (localStorage.visit == "undefined") {
-		document.getElementById("instructions").style.visibility="visible";
+		document.getElementById("instructions").style.display="block";
+        document.getElementById("instructionsContent").style.display="block";
 		console.log(localStorage.visit);
 	} else if (localStorage.visit == "old") {
-		document.getElementById("instructions").style.visibility="visible";
+		document.getElementById("instructions").style.display="none";
+        document.getElementById("instructionsContent").style.display="none";
 	}
     localStorage.timeUpA=0;
     localStorage.timeUpB=0;
