@@ -1,7 +1,7 @@
 Talking Stick App
 --
-https://db.tt/97E632Pg
-![alt tag](https://github.com/talkingstick/repo/blob/master/images/qr.png)
+http://TalkingStickApp.com
+![Download](https://github.com/talkingstick/repo/blob/master/images/qr.png)
 ---------------------------------------------
 Impetus (Aboriginal Tribe): http://en.wikipedia.org/wiki/Talking_stick
 
