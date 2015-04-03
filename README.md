@@ -3,6 +3,8 @@ Talking Stick App
 http://TalkingStickApp.com
 ![Download](https://github.com/talkingstick/repo/blob/master/images/qr.png)
 ---------------------------------------------
+[Phonegap Link](https://build.phonegap.com/apps/1187130/share)
+
 Impetus (Aboriginal Tribe): http://en.wikipedia.org/wiki/Talking_stick
 
 
